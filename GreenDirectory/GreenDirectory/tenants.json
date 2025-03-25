@@ -1,0 +1,26 @@
+[
+  {
+    "id": "tenant-1",
+    "name": "Burger Mania",
+    "category": "Burger & Fast Food",
+    "phone": "555-1234"
+  },
+  {
+    "id": "tenant-2",
+    "name": "Coffee Corner",
+    "category": "Coffee & Pastries",
+    "phone": "555-5678"
+  },
+  {
+    "id": "tenant-3",
+    "name": "Sushi Express",
+    "category": "Sushi & Japanese",
+    "phone": "555-9012"
+  },
+  {
+    "id": "tenant-4",
+    "name": "Pizza Palace",
+    "category": "Pizza & Italian",
+    "phone": "555-3456"
+  }
+]

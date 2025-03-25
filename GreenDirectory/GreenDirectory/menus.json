@@ -1,0 +1,65 @@
+[
+  {
+    "id": "menu-1-1",
+    "name": "Classic Burger",
+    "category": "Burgers",
+    "ingredient": "Beef patty, bun, lettuce, tomato, cheese, sauce",
+    "taste": "Savory and juicy",
+    "price": 12.99,
+    "tenantId": "tenant-1"
+  },
+  {
+    "id": "menu-1-2",
+    "name": "Fries",
+    "category": "Sides",
+    "ingredient": "Potatoes, salt",
+    "taste": "Salty and crispy",
+    "price": 4.99,
+    "tenantId": "tenant-1"
+  },
+  {
+    "id": "menu-2-1",
+    "name": "Latte",
+    "category": "Coffee",
+    "ingredient": "Espresso, milk",
+    "taste": "Milky and coffee-flavored",
+    "price": 3.99,
+    "tenantId": "tenant-2"
+  },
+  {
+    "id": "menu-2-2",
+    "name": "Croissant",
+    "category": "Pastries",
+    "ingredient": "Flour, butter, sugar",
+    "taste": "Buttery and flaky",
+    "price": 2.50,
+    "tenantId": "tenant-2"
+  },
+  {
+    "id": "menu-3-1",
+    "name": "Salmon Nigiri",
+    "category": "Sushi",
+    "ingredient": "Salmon, rice",
+    "taste": "Fresh and delicate",
+    "price": 6.50,
+    "tenantId": "tenant-3"
+  },
+  {
+    "id": "menu-4-1",
+    "name": "Margherita Pizza",
+    "category": "Pizzas",
+    "ingredient": "Dough, tomato sauce, mozzarella, basil",
+    "taste": "Classic Italian, cheesy and tomatoey",
+    "price": 15.50,
+    "tenantId": "tenant-4"
+  },
+   {
+    "id": "menu-4-2",
+    "name": "Pasta Carbonara",
+    "category": "Pasta",
+    "ingredient": "Spaghetti, eggs, pancetta, parmesan, pepper",
+    "taste": "Rich and creamy",
+    "price": 14.00,
+    "tenantId": "tenant-4"
+  }
+]
