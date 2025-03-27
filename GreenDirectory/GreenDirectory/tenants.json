@@ -1,26 +1,56 @@
 [
   {
-    "id": "tenant-1",
-    "name": "Burger Mania",
-    "category": "Burger & Fast Food",
-    "phone": "555-1234"
+    "id": "t1",
+    "name": "Ahza Snack and Beverage",
+    "category": "Beverages",
+    "phone": "012"
   },
   {
-    "id": "tenant-2",
-    "name": "Coffee Corner",
-    "category": "Coffee & Pastries",
-    "phone": "555-5678"
+    "id": "t2",
+    "name": "Bakso Bakwan Malang Josss",
+    "category": "Meatballs",
+    "phone": "013"
   },
   {
-    "id": "tenant-3",
-    "name": "Sushi Express",
-    "category": "Sushi & Japanese",
-    "phone": "555-9012"
+    "id": "t3",
+    "name": "Kantin Kasturi",
+    "category": "Indonesian Food",
+    "phone": "014"
   },
   {
-    "id": "tenant-4",
-    "name": "Pizza Palace",
-    "category": "Pizza & Italian",
-    "phone": "555-3456"
+    "id": "t4",
+    "name": "Kantin Wartas",
+    "category": "Indonesian Food",
+    "phone": "015"
+  },
+  {
+    "id": "t5",
+    "name": "Kedai Laris Manis",
+    "category": "Snacks",
+    "phone": "016"
+  },
+  {
+    "id": "t6",
+    "name": "Kedai Soto Pak Gembul",
+    "category": "Soto",
+    "phone": "017"
+  },
+  {
+    "id": "t7",
+    "name": "La Ding",
+    "category": "Soups",
+    "phone": "018"
+  },
+  {
+    "id": "t8",
+    "name": "Mie Ayam Kriuk",
+    "category": "Noodles",
+    "phone": "019"
+  },
+  {
+    "id": "t9",
+    "name": "Mustafa Minang",
+    "category": "Masakan Padang",
+    "phone": "020"
   }
 ]

@@ -6,7 +6,7 @@
     "ingredient": "Beef patty, bun, lettuce, tomato, cheese, sauce",
     "taste": "Savory and juicy",
     "price": 12.99,
-    "tenantId": "tenant-1"
+    "tenantId": "t1"
   },
   {
     "id": "menu-1-2",
@@ -15,7 +15,7 @@
     "ingredient": "Potatoes, salt",
     "taste": "Salty and crispy",
     "price": 4.99,
-    "tenantId": "tenant-1"
+    "tenantId": "t1"
   },
   {
     "id": "menu-2-1",
@@ -24,7 +24,7 @@
     "ingredient": "Espresso, milk",
     "taste": "Milky and coffee-flavored",
     "price": 3.99,
-    "tenantId": "tenant-2"
+    "tenantId": "t2"
   },
   {
     "id": "menu-2-2",
@@ -33,7 +33,7 @@
     "ingredient": "Flour, butter, sugar",
     "taste": "Buttery and flaky",
     "price": 2.50,
-    "tenantId": "tenant-2"
+    "tenantId": "t2"
   },
   {
     "id": "menu-3-1",
@@ -42,7 +42,7 @@
     "ingredient": "Salmon, rice",
     "taste": "Fresh and delicate",
     "price": 6.50,
-    "tenantId": "tenant-3"
+    "tenantId": "t3"
   },
   {
     "id": "menu-4-1",
@@ -51,7 +51,7 @@
     "ingredient": "Dough, tomato sauce, mozzarella, basil",
     "taste": "Classic Italian, cheesy and tomatoey",
     "price": 15.50,
-    "tenantId": "tenant-4"
+    "tenantId": "t4"
   },
    {
     "id": "menu-4-2",
@@ -60,6 +60,6 @@
     "ingredient": "Spaghetti, eggs, pancetta, parmesan, pepper",
     "taste": "Rich and creamy",
     "price": 14.00,
-    "tenantId": "tenant-4"
+    "tenantId": "t4"
   }
 ]
