@@ -3,81 +3,72 @@
     "id": "t1",
     "name": "Ahza Snack and Beverage",
     "category": "Beverages",
-    "phone": "012",
+    "phone": "012"
   },
   {
     "id": "t2",
     "name": "Bakso Bakwan Malang Josss",
     "category": "Meatballs",
-    "phone": "013",
+    "phone": "013"
   },
   {
     "id": "t3",
     "name": "Kantin Kasturi",
     "category": "Indonesian Food",
-    "phone": "014",
+    "phone": "014"
   },
   {
     "id": "t4",
     "name": "Kantin Wartas",
     "category": "Indonesian Food",
-    "phone": "015",
-    "": "gaada"
+    "phone": "015"
   },
   {
     "id": "t5",
     "name": "Kedai Laris Manis",
     "category": "Snacks",
-    "phone": "08126001285",
-    "": ""
+    "phone": "016"
   },
   {
     "id": "t6",
     "name": "Kedai Soto Pak Gembul",
     "category": "Soto",
-    "phone": "017",
-    "": ""
+    "phone": "017"
   },
   {
     "id": "t7",
     "name": "La Ding",
     "category": "Soups",
-    "phone": "018",
-    "": ""
+    "phone": "018"
   },
   {
     "id": "t8",
     "name": "Mie Ayam Kriuk",
     "category": "Noodles",
-    "phone": "019",
-    "": ""
+    "phone": "019"
   },
   {
     "id": "t9",
     "name": "Mustafa Minang",
     "category": "Masakan Padang",
     "phone": "020",
-    "": ""
   },
   {
     "id": "t10",
     "name": "Dapoer Cowek",
     "category": "Indonesian Food",
     "phone": "021",
-    "": ""
   },
   {
     "id": "t11",
     "name": "Kedai 2 Nyonya",
     "category": "Indonesian Food",
     "phone": "022",
-    "": ""
   },
   {
     "id": "t13",
     "name": "Mama Djempol",
     "category": "Indonesian Food",
-    "phone": "023",
-    "": ""
+    "phone": "023"
   }
 ]
