@@ -51,6 +51,24 @@
     "id": "t9",
     "name": "Mustafa Minang",
     "category": "Masakan Padang",
-    "phone": "020"
+    "phone": "020",
+  },
+  {
+    "id": "t10",
+    "name": "Dapoer Cowek",
+    "category": "Indonesian Food",
+    "phone": "021",
+  },
+  {
+    "id": "t11",
+    "name": "Kedai 2 Nyonya",
+    "category": "Indonesian Food",
+    "phone": "022",
+  },
+  {
+    "id": "t13",
+    "name": "Mama Djempol",
+    "category": "Indonesian Food",
+    "phone": "023"
   }
 ]
