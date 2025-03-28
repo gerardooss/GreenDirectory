@@ -36,73 +36,14 @@ struct ContentView: View {
                 
                 ScrollView{
                     LazyVGrid(columns: columns) {
-                        if selection == "Tenants" {
-                            let filteredTenants = tenantsFromLocal.filter { tenant in
-                                searchText.isEmpty || tenant.name.localizedCaseInsensitiveContains(searchText)
-                            }
-                            
-                            if filteredTenants.isEmpty {
-                                Spacer().padding(.top, 42)
-                                
-                                Image(systemName: "magnifyingglass")
-                                    .font(.largeTitle)
-                                    .foregroundColor(Color.gray)
-                                
-                                Text("No result for \"\(searchText)\"")
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .padding(.top, 4)
-                                
-                                Text("Try a different search.")
-                                    .font(.subheadline)
-                                    .foregroundColor(Color.gray)
-                                
-                            } else {
-                                ForEach(filteredTenants, id: \.self) { tenant in
-                                    NavigationLink(
-                                        destination: DetailView(tenantName: tenant.name),
-                                        label: { CardView(tenantName: tenant.name, tenantId: tenant.id) }
-                                    )
-                                }
-                                .padding(.bottom, 4)
-                            }
-                        } else {
-                            let filteredMenus = menusFromLocal.filter { menu in
-                                searchText.isEmpty || menu.name.localizedCaseInsensitiveContains(searchText)
-                            }
-                            
-                            if filteredMenus.isEmpty {
-                                Spacer().padding(.top, 42)
-                                
-                                Image(systemName: "magnifyingglass")
-                                    .font(.largeTitle)
-                                    .foregroundColor(Color.gray)
-                                
-                                Text("No result for \"\(searchText)\"")
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                    .padding(.top, 4)
-                                
-                                Text("Try a different search.")
-                                    .font(.subheadline)
-                                    .foregroundColor(Color.gray)
-                            } else {
-                                ForEach(filteredMenus, id: \.self) { menu in
-                                    NavigationLink(
-                                        destination: DetailView(tenantName: menu.name),
-                                        label: { CardView(tenantName: menu.name) }
-                                    )
-                                    .padding(.bottom, 4)
-                                }
-                            }
-                        }
+                        contentForLazyVGrid
                     }
                     .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always))
                     .searchFocused($isSearchFieldFocused)
                     .padding(12)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
-                            Text("Tenants")
+                            Text(selection == "Tenants" ? "Tenants" : "Foods")
                                 .font(.largeTitle)
                                 .fontWeight(.bold)
                         }
@@ -119,8 +60,72 @@ struct ContentView: View {
                 }
             }
         }
-        .padding(.top, 12)
         .tint(Color.iconGreen)
+    }
+    
+    @ViewBuilder
+    private var contentForLazyVGrid: some View {
+        // Filter tenant & menu
+        let filteredTenants = tenantsFromLocal.filter { tenant in
+            searchText.isEmpty || tenant.name.localizedCaseInsensitiveContains(searchText)
+        }
+        let filteredMenus = menusFromLocal.filter { menu in
+            searchText.isEmpty || menu.name.localizedCaseInsensitiveContains(searchText)
+        }
+        
+        // Empty result for tenant & menu
+        let showNoTenantsResults = selection == "Tenants" && filteredTenants.isEmpty && !searchText.isEmpty
+        let showNoFoodsResults = selection == "Foods" && filteredMenus.isEmpty && !searchText.isEmpty
+        
+        if selection == "Tenants" {
+            if showNoTenantsResults {
+                noResultsView
+            } else {
+                tenantsListView(tenants: filteredTenants)
+            }
+        } else {
+            if showNoFoodsResults {
+                noResultsView
+            } else {
+                foodsListView(menus: filteredMenus)
+            }
+        }
+    }
+    
+    private var noResultsView: some View {
+        VStack {
+            Spacer().padding(.top, 42)
+            Image(systemName: "magnifyingglass")
+                .font(.largeTitle)
+                .foregroundColor(Color.gray)
+            Text("No result for \"\(searchText)\"")
+                .font(.title3)
+                .fontWeight(.bold)
+                .padding(.top, 4)
+            Text("Try a different search.")
+                .font(.subheadline)
+                .foregroundColor(Color.gray)
+        }
+    }
+    
+    private func tenantsListView(tenants: [Tenant]) -> some View {
+        ForEach(tenants) { tenant in
+            NavigationLink(
+                destination: MenuView(tenantId: tenant.id, tenantName: tenant.name, tenantContact: tenant.phone, tenantDesc: ""),
+                label: { CardView(tenantName: tenant.name, tenantId: tenant.id) }
+            )
+            .padding(.bottom, 4)
+        }
+    }
+    
+    private func foodsListView(menus: [Menu]) -> some View {
+        ForEach(menus) { menu in
+            NavigationLink(
+                destination: DetailView(tenantName: menu.name),
+                label: { CardView(tenantName: menu.name) }
+            )
+            .padding(.bottom, 4)
+        }
     }
 }
 
