@@ -4,10 +4,14 @@
     "name": "Air Mineral",
     "category": "Drink",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "ingredient": "",
 =======
     "ingredients": "",
 >>>>>>> 24b0e7b (feat: menu page & resolve conflict)
+=======
+    "ingredient": "",
+>>>>>>> 8305c75 (fix: data & json decoder)
     "taste": "Other",
     "price": 4000,
     "tenantId": "t1"
@@ -17,10 +21,14 @@
     "name": "Es Teh / Panas Tawar",
     "category": "Drink",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "ingredient": "",
 =======
     "ingredients": "",
 >>>>>>> 24b0e7b (feat: menu page & resolve conflict)
+=======
+    "ingredient": "",
+>>>>>>> 8305c75 (fix: data & json decoder)
     "taste": "Other",
     "price": 3000,
     "tenantId": "t1"
@@ -29,6 +37,7 @@
     "id": 3,
     "name": "Es Teh / Panas Manis",
     "category": "Drink",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "ingredient": "",
     "taste": "Sweet",
@@ -99,6 +108,9 @@
     "tenantId": "t1"
 =======
     "ingredients": "",
+=======
+    "ingredient": "",
+>>>>>>> 8305c75 (fix: data & json decoder)
     "taste": "Sweet",
     "price": 4000,
     "tenantId": "t1"
@@ -107,7 +119,7 @@
     "id": 4,
     "name": "Indocafe Coffee",
     "category": "Drink",
-    "ingredients": "",
+    "ingredient": "",
     "taste": "Other",
     "price": 4000,
     "tenantId": "t1"
@@ -116,7 +128,7 @@
     "id": 5,
     "name": "Kapal Api",
     "category": "Drink",
-    "ingredients": "",
+    "ingredient": "",
     "taste": "Other",
     "price": 4000,
     "tenantId": "t1"
@@ -125,7 +137,7 @@
     "id": 6,
     "name": "Luwak",
     "category": "Drink",
-    "ingredients": "",
+    "ingredient": "",
     "taste": "Sweet",
     "price": 4000,
     "tenantId": "t1"
@@ -134,7 +146,7 @@
     "id": 7,
     "name": "GoodDay Mocca",
     "category": "Drink",
-    "ingredients": "",
+    "ingredient": "",
     "taste": "Sweet",
     "price": 4000,
     "tenantId": "t1"
@@ -143,7 +155,7 @@
     "id": 8,
     "name": "Nutrisari",
     "category": "Drink",
-    "ingredients": "",
+    "ingredient": "",
     "taste": "Sweet",
     "price": 5000,
     "tenantId": "t1"
@@ -152,7 +164,7 @@
     "id": 9,
     "name": "Susu",
     "category": "Drink",
-    "ingredients": "",
+    "ingredient": "",
     "taste": "Sweet",
     "price": 6000,
     "tenantId": "t1"
@@ -161,10 +173,11 @@
     "id": 10,
     "name": "Sprite Fanta Cola",
     "category": "Drink",
-    "ingredients": "",
+    "ingredient": "",
     "taste": "Sweet",
     "price": 6000,
     "tenantId": "t1"
+<<<<<<< HEAD
   },
   {
     "id": 11,
@@ -1579,5 +1592,7 @@
     "price": "",
     "tenantId": ""
 >>>>>>> 24b0e7b (feat: menu page & resolve conflict)
+=======
+>>>>>>> 8305c75 (fix: data & json decoder)
   }
 ]
