@@ -6,83 +6,91 @@
 //
 
 import SwiftUI
-import _SwiftData_SwiftUI
+import SwiftData
 
 struct MenuView: View {
-    @State var searchText: String = ""
-    let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
-    
     @Environment(\.modelContext) private var context
-    @Query private var tenantsFromLocal: [Tenant]
     @Query private var menusFromLocal: [Menu]
+    @State var searchText: String = ""
+    
+    var tenantId: String
+    var tenantName: String
+    var tenantContact: String
+    var tenantDesc: String
+    
+    let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         NavigationStack{
             ScrollView{
                 VStack {
                     HStack {
-                        Image("Leppy")
+                        Image(tenantId)
                             .resizable()
-                            .frame(width: 150, height: 200)
+                            .frame(width: 130, height: 130)
                             .scaledToFill()
                             .clipShape(.circle)
                             .overlay(
-                                Circle().stroke(Color.black, lineWidth: 3)
+                                Circle().stroke(Color.gray, lineWidth: 2)
                             )
                             .padding(.leading, 20)
-                        
+                            .padding(.vertical, 8)
                         
                         Spacer()
+                        
                         VStack(alignment: .leading) {
-                            Text("Kasturi")
+                            Text(tenantName)
                                 .font(.headline)
-                            Text("CP +62287391928")
-                                .font(.caption)
+                            Text(tenantContact)
+                                .font(.subheadline)
+                                .foregroundStyle(Color.gray)
                                 .padding(.bottom, 1)
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed pellentesque justo. Praesent vulputate tincidunt nibh a vulputate. Cras tincidunt nunc at luctus pulvinar")
-                                .font(.system(size: 13))
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed pellentesque justo. ")
+                                .font(.system(size: 12))
                                 .lineLimit(4)
                         }
-                        .frame(width: 170)
+                        .padding(.leading, 4)
+                        
                         Spacer()
                     }
+                    .padding(.trailing, 4)
                     
                     Divider()
                         .frame(height: 2)
-                        .background(Color.black)
+                        .background(Color.gray)
+                    
+                    let menuPerTenant = menusFromLocal.filter { menu in
+                        menu.tenant?.id == tenantId
+                    }
                     
                     LazyVGrid(columns: columns, alignment: .leading) {
-                        ForEach(tenantsFromLocal, id: \.self) { tenant in
-                            ForEach(menusFromLocal.filter { $0.tenant.id == tenant.id }, id: \.self) { menu in
-                                MenuCardView(menuName: menu.name, menuImage: "Leppy", menuPrice: Int(menu.price))
-                            }
+                        ForEach(menuPerTenant) { menu in
+                            MenuCardView(menuName: menu.name, menuImage: "", menuPrice: Int(menu.price))
                         }
                     }
-
                     .padding(.horizontal)
                     .padding(.top, 5)
                 }
             }
-            .searchable(text: $searchText, prompt: "Cari Menu")
-            .navigationTitle("Daftar Tenant")
+            .searchable(text: $searchText)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        
+                        // TODO
                     } label: {
                         Image(systemName: "slider.horizontal.3")
                     }
-                    
                 }
             }
         }
-        
-        
-        
+        .tint(Color.iconGreen)
     }
 }
 
 #Preview {
-    MenuView()
+    MenuView(tenantId: "t1",
+             tenantName: "Ahza Snack & Beverages",
+             tenantContact:"12341412",
+             tenantDesc: "")
 }
