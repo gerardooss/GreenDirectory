@@ -13,10 +13,19 @@ struct MenuView: View {
     @Query private var menusFromLocal: [Menu]
     @State var searchText: String = ""
     
+    
     var tenantId: String
     var tenantName: String
     var tenantContact: String
     var tenantDesc: String
+    
+    var foodFilteredView: [Menu] {
+            let menuPerTenant = menusFromLocal.filter { $0.tenant?.id == tenantId }
+            guard !searchText.isEmpty else { return menuPerTenant }
+            
+            return menuPerTenant.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -59,17 +68,19 @@ struct MenuView: View {
                         .frame(height: 2)
                         .background(Color.gray)
                     
-                    let menuPerTenant = menusFromLocal.filter { menu in
-                        menu.tenant?.id == tenantId
-                    }
+                    
                     
                     LazyVGrid(columns: columns, alignment: .leading) {
-                        ForEach(menuPerTenant) { menu in
-                            MenuCardView(menuName: menu.name, menuImage: "", menuPrice: Int(menu.price))
-                        }
+                        ForEach(foodFilteredView) { menu in
+                            NavigationLink(destination: DetailView(menu: menu)) {
+                                MenuCardView(menuName: menu.name, menuImage: "", menuPrice: Int(menu.price))
+                            }
+                            }
+                            
                     }
                     .padding(.horizontal)
                     .padding(.top, 5)
+                    
                 }
             }
             .searchable(text: $searchText)
@@ -77,7 +88,7 @@ struct MenuView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        // TODO
+                       
                     } label: {
                         Image(systemName: "slider.horizontal.3")
                     }

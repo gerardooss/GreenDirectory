@@ -12,11 +12,10 @@ struct MenuCardView: View {
     @State var menuName: String
     @State var menuImage: String
     @State var menuPrice: Int
+
+    
     
     var body: some View {
-        Button {
-            
-        } label: {
             VStack{
                 Image(menuImage)
                     .resizable()
@@ -25,7 +24,7 @@ struct MenuCardView: View {
                 
                 HStack{
                     Text(menuName)
-                        .font(.system(size: 14))
+                        .font(.system(size: 14,weight:.bold))
                     Spacer()
                     Image(systemName: "heart")
                         .foregroundStyle(.red)
@@ -45,8 +44,9 @@ struct MenuCardView: View {
             .frame(width: 180, height: 180)
             .background(Color(.white))
             .cornerRadius(2)
-            .shadow(color: .gray, radius: 3, y: 5)
-        }.buttonStyle(PlainButtonStyle())
+            .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
+            .border(Color.black.opacity(0.2))
+        
 
         
     }
@@ -55,3 +55,7 @@ struct MenuCardView: View {
 #Preview {
     MenuCardView(menuName: "Food Name", menuImage: "Leppy", menuPrice: 5000)
 }
+
+
+
+

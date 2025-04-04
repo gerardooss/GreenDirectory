@@ -121,12 +121,13 @@ struct ContentView: View {
     private func foodsListView(menus: [Menu]) -> some View {
         ForEach(menus) { menu in
             NavigationLink(
-                destination: DetailView(tenantName: menu.name),
+                destination: DetailView(menu: menu), 
                 label: { CardView(tenantName: menu.name) }
             )
             .padding(.bottom, 4)
         }
     }
+
 }
 
 #Preview {
