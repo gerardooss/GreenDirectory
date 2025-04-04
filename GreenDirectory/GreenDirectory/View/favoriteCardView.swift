@@ -18,7 +18,7 @@ struct favoriteCardView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 16) { 
                     ForEach(0..<3, id: \.self) { _ in
-                        MenuCardView(menuName: "a", menuImage: "", menuPrice: 500)
+//                        MenuCardView(menuName: "a", menuImage: "", menuPrice: 500, isFavorite: .constant(false))
                     }
                 }
 

@@ -3,7 +3,7 @@ import SwiftData
 
 struct DetailView: View {
     @Environment(\.modelContext) private var context
-    var menu: Menu  // Receive menu object directly
+    var menu: Menu
 
     var body: some View {
         VStack {
@@ -24,14 +24,15 @@ struct DetailView: View {
     }
 
     private func toggleFavorite() {
-        menu.isFavorite.toggle() // Toggle favorite state
+        menu.isFavorite.toggle()
         do {
-            try context.save() // Save changes to SwiftData
+            try context.save()
         } catch {
             print("Error saving: \(error.localizedDescription)")
         }
     }
 }
+
 
 
 

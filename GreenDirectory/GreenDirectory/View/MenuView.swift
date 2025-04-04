@@ -12,6 +12,7 @@ struct MenuView: View {
     @Environment(\.modelContext) private var context
     @Query private var menusFromLocal: [Menu]
     @State var searchText: String = ""
+
     
     
     var tenantId: String
@@ -71,12 +72,16 @@ struct MenuView: View {
                     
                     
                     LazyVGrid(columns: columns, alignment: .leading) {
-                        ForEach(foodFilteredView) { menu in
-                            NavigationLink(destination: DetailView(menu: menu)) {
-                                MenuCardView(menuName: menu.name, menuImage: "", menuPrice: Int(menu.price))
+                        ForEach(menusFromLocal) { menu in
+                            if menu.tenant?.id == tenantId &&
+                               (searchText.isEmpty || menu.name.lowercased().contains(searchText.lowercased())) {
+                                
+                                NavigationLink(destination: DetailView(menu: menu)) {
+                                    MenuCardView(menu: menu)
+                                }
                             }
-                            }
-                            
+                        }
+
                     }
                     .padding(.horizontal)
                     .padding(.top, 5)
