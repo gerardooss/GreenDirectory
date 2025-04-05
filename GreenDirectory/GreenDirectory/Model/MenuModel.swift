@@ -17,6 +17,7 @@ class Menu: Identifiable {
     var taste: String
     var price: Double
     var tenant: Tenant?
+    var isFavorite: Bool = false
     
     init (
         id: String,
@@ -25,7 +26,8 @@ class Menu: Identifiable {
         ingredient: String,
         taste: String,
         price: Double,
-        tenant: Tenant?
+        tenant: Tenant? ,
+        isFavorite: Bool
     ) {
         self.id = id
         self.name = name
@@ -34,5 +36,6 @@ class Menu: Identifiable {
         self.taste = taste
         self.price = price
         self.tenant = tenant
+        self.isFavorite = isFavorite
     }
 }
