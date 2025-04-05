@@ -1,13 +1,13 @@
 import SwiftUI
 
-struct favoriteView: View {
+struct FavoriteView: View {
     @State var searchText:String = ""
     
     var body: some View {
         NavigationStack {
             ScrollView{
                 ForEach(0..<3, id: \.self){ i in
-                    favoriteCardView()
+                    FavoriteCardView()
                 }
             }.searchable(text: $searchText)
                 .navigationBarTitleDisplayMode(.inline)
@@ -17,6 +17,6 @@ struct favoriteView: View {
 }
 
 #Preview {
-    favoriteView()
+    FavoriteView()
 }
 
