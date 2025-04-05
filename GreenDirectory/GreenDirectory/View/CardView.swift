@@ -10,14 +10,15 @@ import SwiftUI
 struct CardView: View {
     @State var tenantName: String
     @State var tenantId: String = ""
+    @State var tenantCategory: String
         
     var body: some View {
         HStack {
             Image(tenantId)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 68, height: 68)
-                .background(Circle().fill(Color.themeInverse))
+                .frame(width: 54, height: 54)
+                .background(Circle().fill(Color.theme))
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color.theme, lineWidth: 3))
                 .padding(.trailing, 6)
@@ -33,7 +34,7 @@ struct CardView: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                     
-                    Text("Price")
+                    Text(tenantCategory)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
@@ -49,5 +50,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(tenantName: "Tenant A")
+    CardView(tenantName: "Tenant A", tenantCategory: "Korean")
 }

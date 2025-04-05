@@ -18,8 +18,13 @@ struct ContentView: View {
     @State private var searchText = ""
     @State private var selection = "Tenants"
     
-    let columns: [GridItem] = Array(repeating:
-            .init(.flexible()), count: 1)
+    var columns: [GridItem] {
+        if selection == "Tenants" {
+            return [GridItem(.flexible())]
+        } else {
+            return Array(repeating: .init(.flexible()), count: 2)
+        }
+    }
     
     var body: some View {
         NavigationStack{
@@ -40,6 +45,11 @@ struct ContentView: View {
                     }
                     .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always))
                     .searchFocused($isSearchFieldFocused)
+                    .onChange(of: isSearchFieldFocused) { newValue in
+                        if !newValue && searchText.isEmpty {
+                            selection = "Tenants"
+                        }
+                    }
                     .padding(12)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
@@ -112,7 +122,7 @@ struct ContentView: View {
         ForEach(tenants) { tenant in
             NavigationLink(
                 destination: MenuView(tenantId: tenant.id, tenantName: tenant.name, tenantContact: tenant.phone, tenantDesc: ""),
-                label: { CardView(tenantName: tenant.name, tenantId: tenant.id) }
+                label: { CardView(tenantName: tenant.name, tenantId: tenant.id, tenantCategory: tenant.category) }
             )
             .padding(.bottom, 4)
         }
@@ -121,13 +131,12 @@ struct ContentView: View {
     private func foodsListView(menus: [Menu]) -> some View {
         ForEach(menus) { menu in
             NavigationLink(
-                destination: DetailView(menu: menu), 
-                label: { CardView(tenantName: menu.name) }
+                destination: DetailView(menu: menu),
+                label: { MenuCardView(menu: menu) }
             )
             .padding(.bottom, 4)
         }
     }
-
 }
 
 #Preview {
