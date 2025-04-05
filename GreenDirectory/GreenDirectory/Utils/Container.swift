@@ -29,7 +29,7 @@ actor Container {
                     let tenantObject = Tenant(
                         id: i.id,
                         name: i.name,
-                        category: i.name,
+                        category: i.category,
                         phone: i.phone
                     )
                     
