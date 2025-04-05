@@ -12,8 +12,6 @@ struct MenuView: View {
     @Environment(\.modelContext) private var context
     @Query private var menusFromLocal: [Menu]
     @State var searchText: String = ""
-
-    
     
     var tenantId: String
     var tenantName: String
@@ -26,7 +24,6 @@ struct MenuView: View {
             
             return menuPerTenant.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
-
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -41,7 +38,8 @@ struct MenuView: View {
                             .scaledToFill()
                             .clipShape(.circle)
                             .overlay(
-                                Circle().stroke(Color.gray, lineWidth: 2)
+                                Circle().stroke(
+                                    Color.black.opacity(0.5), lineWidth: 1)
                             )
                             .padding(.leading, 20)
                             .padding(.vertical, 8)
@@ -66,10 +64,8 @@ struct MenuView: View {
                     .padding(.trailing, 4)
                     
                     Divider()
-                        .frame(height: 2)
-                        .background(Color.gray)
-                    
-                    
+                        .frame(height: 1)
+                        .background(Color.black.opacity(0.3))
                     
                     LazyVGrid(columns: columns, alignment: .leading) {
                         ForEach(menusFromLocal) { menu in
@@ -81,7 +77,6 @@ struct MenuView: View {
                                 }
                             }
                         }
-
                     }
                     .padding(.horizontal)
                     .padding(.top, 5)

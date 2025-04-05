@@ -12,39 +12,46 @@ struct MenuCardView: View {
     var menu: Menu
     
     var body: some View {
-        VStack {
-            Image(menu.id) // or menu.imageName if you have a separate image field
+        VStack(alignment: .leading) {
+            Image(menu.id)
                 .resizable()
-                .frame(width: 135, height: 108)
-                .padding(.top, 10)
+                .frame(width: 164, height: 118)
+                .background(
+                    RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.4))
+                )
+                .padding(.top, 8)
+                .padding(.horizontal, 8)
             
             HStack {
                 Text(menu.name)
-                    .font(.system(size: 14, weight: .bold))
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundColor(Color.themeInverse)
+                    .multilineTextAlignment(.leading)
+                
                 Spacer()
+                
                 Image(systemName: menu.isFavorite ? "heart.fill" : "heart")
                     .foregroundColor(.red)
-                Spacer()
-                    .frame(width: 21)
             }
-            .padding(.leading, 22)
+            .padding(.horizontal, 12)
             
             HStack {
-                Text("Rp. \(Int(menu.price))")
-                    .font(.system(size: 14))
+                Text("Rp \(Int(menu.price))")
+                    .font(.system(size: 11))
+                    .foregroundColor(Color.gray)
                     .padding(.bottom, 5)
+                
                 Spacer()
             }
-            .padding(.leading, 22)
+            .padding(.horizontal, 12)
+            
+            Spacer()
         }
         .frame(width: 180, height: 180)
         .background(Color.white)
         .cornerRadius(2)
-        .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
-        .border(Color.black.opacity(0.2))
-
-
-        
+        .shadow(color: Color.black.opacity(0.1), radius: 2, x: 1, y: 2)
+        .border(Color.black.opacity(0.15))
     }
 }
 
@@ -63,8 +70,3 @@ struct MenuCardView: View {
     
     return MenuCardView(menu: sampleMenu)
 }
-
-
-
-
-
