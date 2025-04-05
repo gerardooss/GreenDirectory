@@ -17,7 +17,7 @@ struct MenuCardView: View {
                 .resizable()
                 .frame(width: 164, height: 118)
                 .background(
-                    RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.4))
+                    RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.2))
                 )
                 .padding(.top, 8)
                 .padding(.horizontal, 8)
@@ -35,23 +35,26 @@ struct MenuCardView: View {
             }
             .padding(.horizontal, 12)
             
-            HStack {
+            VStack(alignment: .leading) {
+                Text(menu.ingredient)
+                    .font(.system(size: 11))
+                    .foregroundColor(Color.gray)
+                    .padding(.bottom, 2)
+                
                 Text("Rp \(Int(menu.price))")
                     .font(.system(size: 11))
                     .foregroundColor(Color.gray)
-                    .padding(.bottom, 5)
                 
-                Spacer()
             }
             .padding(.horizontal, 12)
             
             Spacer()
+            
         }
-        .frame(width: 180, height: 180)
-        .background(Color.white)
+        .frame(width: 180, height: 190)
+        .background(Color.cardBG)
         .cornerRadius(2)
         .shadow(color: Color.black.opacity(0.1), radius: 2, x: 1, y: 2)
-        .border(Color.black.opacity(0.15))
     }
 }
 
@@ -65,7 +68,8 @@ struct MenuCardView: View {
         taste: "Sweet",
         price: 5000,
         tenant: sampleTenant,
-        isFavorite: true
+        isFavorite: true,
+        skw: ""
     )
     
     return MenuCardView(menu: sampleMenu)
