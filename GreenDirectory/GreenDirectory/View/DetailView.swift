@@ -47,11 +47,9 @@ struct DetailView: View {
         taste: "Sweet",
         price: 10.0,
         tenant: sampleTenant,
-        isFavorite: false
+        isFavorite: false,
+        skw: ""
     )
 
     return DetailView(menu: sampleMenu)
 }
-
-
-

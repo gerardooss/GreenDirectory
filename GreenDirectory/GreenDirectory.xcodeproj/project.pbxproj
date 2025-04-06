@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		568E58192DA133570091C14B /* SwiftUIFlow in Frameworks */ = {isa = PBXBuildFile; productRef = 568E58182DA133570091C14B /* SwiftUIFlow */; };
+		568E581D2DA157160091C14B /* WARangeSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 568E581C2DA157160091C14B /* WARangeSlider */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		564ABB182D92E27B00AE0484 /* GreenDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568E58192DA133570091C14B /* SwiftUIFlow in Frameworks */,
+				568E581D2DA157160091C14B /* WARangeSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = GreenDirectory;
 			packageProductDependencies = (
+				568E58182DA133570091C14B /* SwiftUIFlow */,
+				568E581C2DA157160091C14B /* WARangeSlider */,
 			);
 			productName = GreenDirectory;
 			productReference = 564ABB182D92E27B00AE0484 /* GreenDirectory.app */;
@@ -94,6 +103,10 @@
 			);
 			mainGroup = 564ABB0F2D92E27B00AE0484;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				568E58172DA133570091C14B /* XCRemoteSwiftPackageReference "SwiftUIFlow" */,
+				568E581B2DA157160091C14B /* XCRemoteSwiftPackageReference "RangeSlider" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 564ABB192D92E27B00AE0484 /* Products */;
 			projectDirPath = "";
@@ -322,6 +335,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		568E58172DA133570091C14B /* XCRemoteSwiftPackageReference "SwiftUIFlow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ciaranrobrien/SwiftUIFlow";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		568E581B2DA157160091C14B /* XCRemoteSwiftPackageReference "RangeSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/warchimede/RangeSlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		568E58182DA133570091C14B /* SwiftUIFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 568E58172DA133570091C14B /* XCRemoteSwiftPackageReference "SwiftUIFlow" */;
+			productName = SwiftUIFlow;
+		};
+		568E581C2DA157160091C14B /* WARangeSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 568E581B2DA157160091C14B /* XCRemoteSwiftPackageReference "RangeSlider" */;
+			productName = WARangeSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 564ABB102D92E27B00AE0484 /* Project object */;
 }
