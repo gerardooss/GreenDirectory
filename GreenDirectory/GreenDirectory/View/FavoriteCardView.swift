@@ -16,7 +16,7 @@ struct FavoriteCardView: View {
                 .padding(.bottom, 10)
 
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 16) { 
+                HStack(spacing: 16) {
                     ForEach(0..<3, id: \.self) { _ in
 //                        MenuCardView(menuName: "a", menuImage: "", menuPrice: 500, isFavorite: .constant(false))
                     }
@@ -32,5 +32,3 @@ struct FavoriteCardView: View {
 #Preview {
     FavoriteCardView()
 }
-
-
