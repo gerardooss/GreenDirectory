@@ -4,11 +4,10 @@ import _SwiftData_SwiftUI
 struct FavoriteView: View {
     @State var searchText:String = ""
     @Query(filter: #Predicate<Menu> { $0.isFavorite == true }) private var favoriteMenus: [Menu]
-
+    
     var groupedFavorites: [Tenant: [Menu]] {
         Dictionary(grouping: favoriteMenus) { $0.tenant! }
     }
-
     
     var filteredFavorites: [Tenant: [Menu]] {
         let filtered = favoriteMenus.filter {
@@ -16,7 +15,7 @@ struct FavoriteView: View {
         }
         return Dictionary(grouping: filtered) { $0.tenant! }
     }
-
+    
     var body: some View {
         NavigationStack {
             ScrollView{
@@ -38,10 +37,10 @@ struct FavoriteView: View {
                         }
                     }
                 }
-
-            }.searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) )
+            }
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) )
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle("Filter Menu")
+                .navigationTitle("Favorite Dishes")
         }
     }
 }
