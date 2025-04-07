@@ -61,9 +61,13 @@ struct ContentView: View {
                             Button(action: {
                                 // TODO
                             }) {
-                                Image(systemName: "heart.circle")
-                                    .foregroundColor(Color.iconGreen)
-                                    .font(.title2)
+                                NavigationLink(destination: {
+                                    FavoriteView()
+                                }, label: {
+                                    Image(systemName: "heart.circle")
+                                        .foregroundColor(Color.iconGreen)
+                                        .font(.title2)
+                                })
                             }
                         }
                     }

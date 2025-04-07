@@ -101,9 +101,10 @@ struct MenuView: View {
                     .padding(.horizontal)
                     .padding(.top, 5)
                 }
+                .navigationTitle(Text("Daftar Menu"))
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .searchable(text: $searchText)
-            .navigationBarTitleDisplayMode(.inline)
+            .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -112,9 +113,11 @@ struct MenuView: View {
                         Image(systemName: "slider.horizontal.3")
                     }
                     .sheet(isPresented: $isModalOpen) { filterModal() }
+                    
                 }
             }
         }
+        
         .tint(Color.iconGreen)
     }
     
