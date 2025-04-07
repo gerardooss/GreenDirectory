@@ -9,13 +9,18 @@ import SwiftUI
 
 struct CardView: View {
     @State var tenantName: String
-    
+    @State var tenantId: String = ""
+    @State var tenantCategory: String
+        
     var body: some View {
         HStack {
-            Image("")
-                .frame(width: 68, height: 68)
-                .background(Circle().fill(Color.blue))
+            Image(tenantId)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 54, height: 54)
+                .background(Circle().fill(Color.theme))
                 .clipShape(Circle())
+                .overlay(Circle().stroke(Color.theme, lineWidth: 3))
                 .padding(.trailing, 6)
             
             Spacer()
@@ -29,7 +34,7 @@ struct CardView: View {
                         .lineLimit(2)
                         .multilineTextAlignment(.leading)
                     
-                    Text("Price")
+                    Text(tenantCategory)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
@@ -38,12 +43,12 @@ struct CardView: View {
         }
         .frame(maxWidth: .infinity)
         .padding(12)
-        .background(Rectangle().fill(Color.white))
+        .background(Color.cardBG)
         .cornerRadius(10)
-        .shadow(color: .gray, radius: 3, x: 2, y: 2)
+        .shadow(color: .gray.opacity(0.4), radius: 2, x: 1, y: 2)
     }
 }
 
 #Preview {
-    CardView(tenantName: "Tenant A")
+    CardView(tenantName: "Tenant A", tenantCategory: "Korean")
 }

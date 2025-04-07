@@ -29,7 +29,7 @@ actor Container {
                     let tenantObject = Tenant(
                         id: i.id,
                         name: i.name,
-                        category: i.name,
+                        category: i.category,
                         phone: i.phone
                     )
                     
@@ -48,15 +48,18 @@ actor Container {
                     }
                     
                     let menuObject = Menu(
-                        id: i.id,
+                        id: String(i.id),
                         name: i.name,
                         category: i.category,
                         ingredient: i.ingredient,
                         taste: i.taste,
                         price: i.price,
-                        tenant: tenant
+                        tenant: tenant,
+                        isFavorite: false,
+                        skw: i.skw
                     )
                     container.mainContext.insert(menuObject)
+                    print("Menu inserted: \(menuObject.name), ID: \(menuObject.id)")
                 }
             }
             shouldCreateDefaults = false

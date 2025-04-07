@@ -17,6 +17,8 @@ class Menu: Identifiable {
     var taste: String
     var price: Double
     var tenant: Tenant?
+    var isFavorite: Bool = false
+    var searchKeyWord: String
     
     init (
         id: String,
@@ -25,7 +27,9 @@ class Menu: Identifiable {
         ingredient: String,
         taste: String,
         price: Double,
-        tenant: Tenant?
+        tenant: Tenant? ,
+        isFavorite: Bool,
+        skw: String
     ) {
         self.id = id
         self.name = name
@@ -34,5 +38,7 @@ class Menu: Identifiable {
         self.taste = taste
         self.price = price
         self.tenant = tenant
+        self.isFavorite = isFavorite
+        self.searchKeyWord = skw
     }
 }

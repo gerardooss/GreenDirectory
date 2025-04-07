@@ -15,13 +15,14 @@ struct TenantResponse: Decodable {
 }
 
 struct MenuResponse: Decodable {
-    var id: String
+    var id: Int
     var name: String
     var category: String
     var ingredient: String
     var taste: String
     var price: Double
     var tenantId: String
+    var skw: String
 }
 
 struct TenantJSONDecoder{

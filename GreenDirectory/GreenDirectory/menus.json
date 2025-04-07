@@ -1,65 +1,932 @@
 [
   {
-    "id": "menu-1-1",
-    "name": "Classic Burger",
-    "category": "Burgers",
-    "ingredient": "Beef patty, bun, lettuce, tomato, cheese, sauce",
-    "taste": "Savory and juicy",
-    "price": 12.99,
-    "tenantId": "tenant-1"
+    "id": 1,
+    "name": "Air Mineral",
+    "category": "Drink",
+    "ingredient": "Water",
+    "taste": "Other",
+    "price": 4000,
+    "tenantId": "t1",
+    "skw": "ahza water"
   },
   {
-    "id": "menu-1-2",
-    "name": "Fries",
-    "category": "Sides",
-    "ingredient": "Potatoes, salt",
-    "taste": "Salty and crispy",
-    "price": 4.99,
-    "tenantId": "tenant-1"
+    "id": 3,
+    "name": "Es Teh / Panas Manis",
+    "category": "Drink",
+    "ingredient": "Tea",
+    "taste": "Sweet",
+    "price": 4000,
+    "tenantId": "t1",
+    "skw": "ahza tea"
   },
   {
-    "id": "menu-2-1",
-    "name": "Latte",
-    "category": "Coffee",
-    "ingredient": "Espresso, milk",
-    "taste": "Milky and coffee-flavored",
-    "price": 3.99,
-    "tenantId": "tenant-2"
+    "id": 8,
+    "name": "Nutrisari",
+    "category": "Drink",
+    "ingredient": "Other",
+    "taste": "Sweet",
+    "price": 5000,
+    "tenantId": "t1",
+    "skw": "ahza"
   },
   {
-    "id": "menu-2-2",
-    "name": "Croissant",
-    "category": "Pastries",
-    "ingredient": "Flour, butter, sugar",
-    "taste": "Buttery and flaky",
-    "price": 2.50,
-    "tenantId": "tenant-2"
+    "id": 9,
+    "name": "Susu",
+    "category": "Drink",
+    "ingredient": "Milk",
+    "taste": "Sweet",
+    "price": 6000,
+    "tenantId": "t1",
+    "skw": "ahza milk"
   },
   {
-    "id": "menu-3-1",
-    "name": "Salmon Nigiri",
-    "category": "Sushi",
-    "ingredient": "Salmon, rice",
-    "taste": "Fresh and delicate",
-    "price": 6.50,
-    "tenantId": "tenant-3"
+    "id": 10,
+    "name": "Sprite Fanta Cola",
+    "category": "Drink",
+    "ingredient": "Other",
+    "taste": "Sweet",
+    "price": 6000,
+    "tenantId": "t1",
+    "skw": "ahza"
   },
   {
-    "id": "menu-4-1",
-    "name": "Margherita Pizza",
-    "category": "Pizzas",
-    "ingredient": "Dough, tomato sauce, mozzarella, basil",
-    "taste": "Classic Italian, cheesy and tomatoey",
-    "price": 15.50,
-    "tenantId": "tenant-4"
+    "id": 13,
+    "name": "Frestea 350ml",
+    "category": "Drink",
+    "ingredient": "Other",
+    "taste": "Sweet",
+    "price": 5000,
+    "tenantId": "t1",
+    "skw": "ahza"
   },
-   {
-    "id": "menu-4-2",
-    "name": "Pasta Carbonara",
-    "category": "Pasta",
-    "ingredient": "Spaghetti, eggs, pancetta, parmesan, pepper",
-    "taste": "Rich and creamy",
-    "price": 14.00,
-    "tenantId": "tenant-4"
+  {
+    "id": 15,
+    "name": "Jus Alpukat",
+    "category": "Drink",
+    "ingredient": "Avocado",
+    "taste": "Sweet",
+    "price": 10000,
+    "tenantId": "t1",
+    "skw": "ahza avocado juice"
+  },
+  {
+    "id": 16,
+    "name": "Jus Strawberry",
+    "category": "Drink",
+    "ingredient": "Strawberry",
+    "taste": "Sweet",
+    "price": 10000,
+    "tenantId": "t1",
+    "skw": "ahza strawberry juice"
+  },
+  {
+    "id": 25,
+    "name": "Indomie Telor",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 10000,
+    "tenantId": "t1",
+    "skw": "ahza"
+  },
+  {
+    "id": 28,
+    "name": "Brownies Lumer",
+    "category": "Dessert",
+    "ingredient": "Other",
+    "taste": "Sweet",
+    "price": 10000,
+    "tenantId": "t1",
+    "skw": "ahza kue"
+  },
+  {
+    "id": 31,
+    "name": "Bakso Urat Komplit",
+    "category": "Main dish",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 25000,
+    "tenantId": "t2",
+    "skw": "meatballs baso"
+  },
+  {
+    "id": 33,
+    "name": "Bakso Rawit Komplit",
+    "category": "Main dish",
+    "ingredient": "Beef",
+    "taste": "Spicy",
+    "price": 25000,
+    "tenantId": "t2",
+    "skw": "meatballs baso"
+  },
+  {
+    "id": 34,
+    "name": "Bakwan Malang",
+    "category": "Main dish",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 15000,
+    "tenantId": "t2",
+    "skw": "meatballs baso"
+  },
+  {
+    "id": 35,
+    "name": "Nasi Putih",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Other",
+    "price": 5000,
+    "tenantId": "t2",
+    "skw": "rice"
+  },
+  {
+    "id": 36,
+    "name": "Ikan Bakar Bumbu",
+    "category": "Side dish",
+    "ingredient": "Fish",
+    "taste": "Savoury",
+    "price": 17000,
+    "tenantId": "t2",
+    "skw": "fish"
+  },
+  {
+    "id": 39,
+    "name": "Sup Tom Yum",
+    "category": "Side dish",
+    "ingredient": "Shrimp",
+    "taste": "Sour",
+    "price": 20000,
+    "tenantId": "t2",
+    "skw": "soup shrimp"
+  },
+  {
+    "id": 44,
+    "name": "Bakso Goreng",
+    "category": "Snack",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 15000,
+    "tenantId": "t2",
+    "skw": "meatballs baso snack"
+  },
+  {
+    "id": 45,
+    "name": "Pangsit Goreng",
+    "category": "Snack",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 15000,
+    "tenantId": "t2",
+    "skw": "dumplings snack"
+  },
+  {
+    "id": 47,
+    "name": "Pangsit Rebus",
+    "category": "Snack",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 3000,
+    "tenantId": "t2",
+    "skw": "dumplings snack"
+  },
+  {
+    "id": 48,
+    "name": "Risol",
+    "category": "Snack",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 3000,
+    "tenantId": "t2",
+    "skw": "snack"
+  },
+  {
+    "id": 50,
+    "name": "Ayam Bakar",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 14000,
+    "tenantId": "t3",
+    "skw": "kasturi chicken"
+  },
+  {
+    "id": 52,
+    "name": "Ayam Teriyaki",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t3",
+    "skw": "kasturi chicken"
+  },
+  {
+    "id": 53,
+    "name": "Ayam Goreng Serundeng",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 14000,
+    "tenantId": "t3",
+    "skw": "kasturi chicken"
+  },
+  {
+    "id": 56,
+    "name": "Sapi Lada Hitam",
+    "category": "Side dish",
+    "ingredient": "Beef",
+    "taste": "Spicy",
+    "price": 14000,
+    "tenantId": "t3",
+    "skw": "kasturi beef"
+  },
+  {
+    "id": 57,
+    "name": "Ikan Cakalang Suwir",
+    "category": "Side dish",
+    "ingredient": "Fish",
+    "taste": "Spicy",
+    "price": 5000,
+    "tenantId": "t3",
+    "skw": "kasturi fish"
+  },
+  {
+    "id": 61,
+    "name": "Kentang Masak Balado",
+    "category": "Side dish",
+    "ingredient": "Potato",
+    "taste": "Spicy",
+    "price": 5000,
+    "tenantId": "t3",
+    "skw": "kasturi potato"
+  },
+  {
+    "id": 69,
+    "name": "Telor Ceplok Balado",
+    "category": "Side dish",
+    "ingredient": "Egg",
+    "taste": "Spicy",
+    "price": 5000,
+    "tenantId": "t3",
+    "skw": "kasturi egg"
+  },
+  {
+    "id": 72,
+    "name": "Sayur Sawi Putih",
+    "category": "Side dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t3",
+    "skw": "kasturi vegetables veggies"
+  },
+  {
+    "id": 76,
+    "name": "Bakwan Jagung",
+    "category": "Snack",
+    "ingredient": "Other",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t3",
+    "skw": "kasturi snack"
+  },
+  {
+    "id": 84,
+    "name": "Sambal merah",
+    "category": "Other",
+    "ingredient": "Other",
+    "taste": "Spicy",
+    "price": 0,
+    "tenantId": "t3",
+    "skw": "kasturi"
+  },
+  {
+    "id": 87,
+    "name": "Chicken Salted Egg + Egg",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t5",
+    "skw": "ayam"
+  },
+  {
+    "id": 88,
+    "name": "Chicken Yakiniku + Egg",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 16000,
+    "tenantId": "t5",
+    "skw": "ayam"
+  },
+  {
+    "id": 89,
+    "name": "Chicken Pop Corn + Egg",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 16000,
+    "tenantId": "t5",
+    "skw": "ayam"
+  },
+  {
+    "id": 90,
+    "name": "Cumi Pete + Egg",
+    "category": "Main dish",
+    "ingredient": "Squid",
+    "taste": "Savoury",
+    "price": 16000,
+    "tenantId": "t5",
+    "skw": "squid"
+  },
+  {
+    "id": 91,
+    "name": "Nasi Hainam",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t5",
+    "skw": "rice"
+  },
+  {
+    "id": 92,
+    "name": "Zuppa Soup",
+    "category": "Snack",
+    "ingredient": "Other",
+    "taste": "Savoury",
+    "price": 12000,
+    "tenantId": "t5",
+    "skw": "snack"
+  },
+  {
+    "id": 93,
+    "name": "Kue Sus",
+    "category": "Snack",
+    "ingredient": "Other",
+    "taste": "Sweet",
+    "price": 6000,
+    "tenantId": "t5",
+    "skw": "snack"
+  },
+  {
+    "id": 94,
+    "name": "Bakso Goreng",
+    "category": "Snack",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 7500,
+    "tenantId": "t5",
+    "skw": "snack"
+  },
+  {
+    "id": 95,
+    "name": "Bakso Goreng isi 3",
+    "category": "Snack",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t5",
+    "skw": "snack"
+  },
+  {
+    "id": 96,
+    "name": "Ayam Goreng dan Nasi",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 23000,
+    "tenantId": "t6",
+    "skw": "pak gembul chicken rice"
+  },
+  {
+    "id": 97,
+    "name": "Pecel dan Nasi",
+    "category": "Main dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 15000,
+    "tenantId": "t6",
+    "skw": "pak gembul rice vegetables veggies sayur"
+  },
+  {
+    "id": 98,
+    "name": "Soto Ayam",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 17000,
+    "tenantId": "t6",
+    "skw": "pak gembul chicken"
+  },
+  {
+    "id": 99,
+    "name": "Soto Ayam dan Nasi",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t6",
+    "skw": "pak gembul chicken rice"
+  },
+  {
+    "id": 100,
+    "name": "Pecel",
+    "category": "Main dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 12000,
+    "tenantId": "t6",
+    "skw": "pak gembul sayur"
+  },
+  {
+    "id": 102,
+    "name": "Dimsum isi 4",
+    "category": "Snack",
+    "ingredient": "Shrimp",
+    "taste": "Savoury",
+    "price": 13000,
+    "tenantId": "t6",
+    "skw": "pak gembul snack dumplings shrimp"
+  },
+  {
+    "id": 103,
+    "name": "Nasi Putih",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t6",
+    "skw": "pak gembul rice"
+  },
+  {
+    "id": 104,
+    "name": "Tempe",
+    "category": "Side dish",
+    "ingredient": "Tempe",
+    "taste": "Savoury",
+    "price": 3000,
+    "tenantId": "t6",
+    "skw": "pak gembul"
+  },
+  {
+    "id": 105,
+    "name": "Tahu",
+    "category": "Side dish",
+    "ingredient": "Tofu",
+    "taste": "Savoury",
+    "price": 3000,
+    "tenantId": "t6",
+    "skw": "pak gembul tofu"
+  },
+  {
+    "id": 106,
+    "name": "Sop Iga",
+    "category": "Side dish",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 27000,
+    "tenantId": "t7",
+    "skw": "la ding beef soup"
+  },
+  {
+    "id": 107,
+    "name": "Sop Daging",
+    "category": "Side dish",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 27000,
+    "tenantId": "t7",
+    "skw": "la ding beef soup"
+  },
+  {
+    "id": 108,
+    "name": "Soto Mie",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t7",
+    "skw": "la ding noodles"
+  },
+  {
+    "id": 109,
+    "name": "Siomay 1 pcs",
+    "category": "Side dish",
+    "ingredient": "Fish",
+    "taste": "Savoury",
+    "price": 6000,
+    "tenantId": "t7",
+    "skw": "la ding fish"
+  },
+  {
+    "id": 110,
+    "name": "Kentang 1 pcs",
+    "category": "Side dish",
+    "ingredient": "Potato",
+    "taste": "Savoury",
+    "price": 6000,
+    "tenantId": "t7",
+    "skw": "la ding potato"
+  },
+  {
+    "id": 111,
+    "name": "Telur 1 pcs",
+    "category": "Side dish",
+    "ingredient": "Egg",
+    "taste": "Savoury",
+    "price": 6000,
+    "tenantId": "t7",
+    "skw": "la ding egg"
+  },
+  {
+    "id": 112,
+    "name": "Tahu 1 pcs",
+    "category": "Side dish",
+    "ingredient": "Tofu",
+    "taste": "Savoury",
+    "price": 6000,
+    "tenantId": "t7",
+    "skw": "la ding tofu"
+  },
+  {
+    "id": 113,
+    "name": "Pare 1 pcs",
+    "category": "Side dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 6000,
+    "tenantId": "t7",
+    "skw": "la ding veggies vegetables sayur"
+  },
+  {
+    "id": 114,
+    "name": "Siomay Porsi",
+    "category": "Main dish",
+    "ingredient": "Fish",
+    "taste": "Savoury",
+    "price": 24000,
+    "tenantId": "t7",
+    "skw": "la ding fish"
+  },
+  {
+    "id": 115,
+    "name": "Nasi Putih",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Other",
+    "price": 5000,
+    "tenantId": "t7",
+    "skw": "la ding rice"
+  },
+  {
+    "id": 117,
+    "name": "Mie Ayam",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 23000,
+    "tenantId": "t8",
+    "skw": "chicken noodles"
+  },
+  {
+    "id": 118,
+    "name": "Mie Ayam Pangsit",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 28000,
+    "tenantId": "t8",
+    "skw": "chicken noodles dumplings"
+  },
+  {
+    "id": 119,
+    "name": "Mie Ayam Bakso",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 28000,
+    "tenantId": "t8",
+    "skw": "chicken noodles baso meatballs"
+  },
+  {
+    "id": 120,
+    "name": "Mie Ayam Dino",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 33000,
+    "tenantId": "t8",
+    "skw": "chicken noodles"
+  },
+  {
+    "id": 121,
+    "name": "Mie Ayam Yamin",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 23000,
+    "tenantId": "t8",
+    "skw": "chicken noodles"
+  },
+  {
+    "id": 122,
+    "name": "Mie Ayam Rica",
+    "category": "Main dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 23000,
+    "tenantId": "t8",
+    "skw": "chicken noodles"
+  },
+  {
+    "id": 123,
+    "name": "Gado-Gado",
+    "category": "Main dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t8",
+    "skw": "vegetables sayur veggies"
+  },
+  {
+    "id": 124,
+    "name": "Ketoprak",
+    "category": "Main dish",
+    "ingredient": "Other",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t8",
+    "skw": "vegetables sayur veggies"
+  },
+  {
+    "id": 125,
+    "name": "Risol Mayo",
+    "category": "Snack",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 4000,
+    "tenantId": "t8",
+    "skw": "snack"
+  },
+  {
+    "id": 126,
+    "name": "Risol Sayur",
+    "category": "Snack",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 4000,
+    "tenantId": "t8",
+    "skw": "snack"
+  },
+  {
+    "id": 127,
+    "name": "Ayam Gulai",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 15000,
+    "tenantId": "t9",
+    "skw": "mustafa minang chicken"
+  },
+  {
+    "id": 129,
+    "name": "Ayam Goreng Padang",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 15000,
+    "tenantId": "t9",
+    "skw": "mustafa minang chicken"
+  },
+  {
+    "id": 131,
+    "name": "Gulai Tunjang (Kikil)",
+    "category": "Side dish",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t9",
+    "skw": "mustafa minang beef"
+  },
+  {
+    "id": 134,
+    "name": "Paket Nasi Ayam Bakar",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t9",
+    "skw": "mustafa minang chicken"
+  },
+  {
+    "id": 138,
+    "name": "Paket Nasi Ayam Goreng",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t9",
+    "skw": "mustafa minang chicken"
+  },
+  {
+    "id": 140,
+    "name": "Paket Nasi Rendang",
+    "category": "Main dish",
+    "ingredient": "Beef",
+    "taste": "Savoury",
+    "price": 25000,
+    "tenantId": "t9",
+    "skw": "mustafa minang beef"
+  },
+  {
+    "id": 147,
+    "name": "Es Teh Manis",
+    "category": "Drink",
+    "ingredient": "Tea",
+    "taste": "Sweet",
+    "price": 5000,
+    "tenantId": "t9",
+    "skw": "mustafa minang tea"
+  },
+  {
+    "id": 149,
+    "name": "Air Putih Dingin",
+    "category": "Drink",
+    "ingredient": "Water",
+    "taste": "Other",
+    "price": 2000,
+    "tenantId": "t9",
+    "skw": "mustafa minang water"
+  },
+  {
+    "id": 153,
+    "name": "Telur Dadar Padang",
+    "category": "Side dish",
+    "ingredient": "Egg",
+    "taste": "Spicy",
+    "price": 5000,
+    "tenantId": "t9",
+    "skw": "mustafa minang egg"
+  },
+  {
+    "id": 154,
+    "name": "Nasi Bogana",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Savoury",
+    "price": 25000,
+    "tenantId": "t10",
+    "skw": "dapoer cowek rice"
+  },
+  {
+    "id": 155,
+    "name": "Nasi Krawu",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Savoury",
+    "price": 25000,
+    "tenantId": "t10",
+    "skw": "dapoer cowek rice"
+  },
+  {
+    "id": 156,
+    "name": "Nasi Rames",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Savoury",
+    "price": 22000,
+    "tenantId": "t10",
+    "skw": "dapoer cowek rice"
+  },
+  {
+    "id": 157,
+    "name": "Nasi Pecel",
+    "category": "Main dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 20000,
+    "tenantId": "t10",
+    "skw": "dapoer cowek vegetables veggies sayur"
+  },
+  {
+    "id": 158,
+    "name": "Nasi Tempong",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Savoury",
+    "price": 22000,
+    "tenantId": "t10",
+    "skw": "dapoer cowek rice"
+  },
+  {
+    "id": 159,
+    "name": "Aneka Gorengan",
+    "category": "Snack",
+    "ingredient": "Other",
+    "taste": "Savoury",
+    "price": 2000,
+    "tenantId": "t10",
+    "skw": "dapoer cowek snack"
+  },
+  {
+    "id": 160,
+    "name": "Ayam Sauce Madu",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 11000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya chicken"
+  },
+  {
+    "id": 165,
+    "name": "Ayam Cabe Ijo",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Spicy",
+    "price": 11000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya chicken"
+  },
+  {
+    "id": 167,
+    "name": "Ikan Dori Lada Garam",
+    "category": "Side dish",
+    "ingredient": "Fish",
+    "taste": "Savoury",
+    "price": 11000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya fish"
+  },
+  {
+    "id": 168,
+    "name": "Tumis Capcay",
+    "category": "Side dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya vegetables veggies sayur"
+  },
+  {
+    "id": 171,
+    "name": "Tumis kangkung",
+    "category": "Side dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya vegetables veggies sayur"
+  },
+  {
+    "id": 174,
+    "name": "Sayur singkong gulai",
+    "category": "Side dish",
+    "ingredient": "Veggies",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya vegetables veggies sayur"
+  },
+  {
+    "id": 180,
+    "name": "Tahu/Tempe Goreng",
+    "category": "Side dish",
+    "ingredient": "Other",
+    "taste": "Savoury",
+    "price": 2000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya tahu tempe tofu"
+  },
+  {
+    "id": 182,
+    "name": "Kentang Kering Mustofa",
+    "category": "Side dish",
+    "ingredient": "Potato",
+    "taste": "Savoury",
+    "price": 5000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya potato"
+  },
+  {
+    "id": 186,
+    "name": "Terong Balado",
+    "category": "Side dish",
+    "ingredient": "Veggies",
+    "taste": "Spicy",
+    "price": 5000,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya vegetables veggies sayur"
+  },
+  {
+    "id": 188,
+    "name": "Kerupuk",
+    "category": "Other",
+    "ingredient": "Other",
+    "taste": "Savoury",
+    "price": 0,
+    "tenantId": "t11",
+    "skw": "kedai 2 nyonya kerupuk"
   }
 ]
