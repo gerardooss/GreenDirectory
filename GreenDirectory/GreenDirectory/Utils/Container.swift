@@ -30,7 +30,8 @@ actor Container {
                         id: i.id,
                         name: i.name,
                         category: i.category,
-                        phone: i.phone
+                        phone: i.phone,
+                        desc: i.desc
                     )
                     
                     container.mainContext.insert(tenantObject)

@@ -16,6 +16,7 @@ struct MenuCardView: View {
             Image(menu.id)
                 .resizable()
                 .frame(width: 164, height: 118)
+                .cornerRadius(12)
                 .background(
                     RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.2))
                 )
@@ -53,15 +54,15 @@ struct MenuCardView: View {
         }
         .frame(width: 180, height: 190)
         .background(Color.cardBG)
-        .cornerRadius(2)
+        .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.1), radius: 2, x: 1, y: 2)
     }
 }
 
 #Preview {
-    let sampleTenant = Tenant(id: "t1", name: "Sample Tenant", category: "Cafe", phone: "123456")
+    let sampleTenant = Tenant(id: "t1", name: "Sample Tenant", category: "Cafe", phone: "123456", desc: "Sample Desc")
     let sampleMenu = Menu(
-        id: "m1",
+        id: "57",
         name: "Leppy",
         category: "Food",
         ingredient: "Choco",
@@ -71,5 +72,5 @@ struct MenuCardView: View {
         isFavorite: true
     )
     
-    return MenuCardView(menu: sampleMenu)
+    MenuCardView(menu: sampleMenu)
 }

@@ -126,7 +126,7 @@ struct ContentView: View {
     private func tenantsListView(tenants: [Tenant]) -> some View {
         ForEach(tenants) { tenant in
             NavigationLink(
-                destination: MenuView(tenantId: tenant.id, tenantName: tenant.name, tenantContact: tenant.phone, tenantDesc: ""),
+                destination: MenuView(tenantId: tenant.id, tenantName: tenant.name, tenantContact: tenant.phone, tenantDesc: tenant.desc),
                 label: { CardView(tenantName: tenant.name, tenantId: tenant.id, tenantCategory: tenant.category) }
             )
             .padding(.bottom, 4)

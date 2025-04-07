@@ -10,7 +10,8 @@ struct DetailView: View {
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
     var foodFilteredView: [Menu] {
-        menusFromLocal .filter { $0.tenant?.id == menu.tenant?.id }
+        menusFromLocal .filter { ($0.ingredient == menu.ingredient
+            || $0.category == menu.category) && $0.id != menu.id }
     }
     
     var selectedTenant: [Tenant] {
@@ -18,17 +19,18 @@ struct DetailView: View {
     }
     
     var body: some View {
-        VStack {
+        ScrollView {
             Image(menu.id)
                 .resizable()
                 .frame(width:370, height:270)
                 .clipShape (RoundedRectangle(cornerRadius:15))
                 .background(
-                    RoundedRectangle(cornerRadius: 12).fill(Color.themeInverse.opacity(0.2))
+                    RoundedRectangle(cornerRadius: 15).fill(Color.themeInverse.opacity(0.2))
                 )
+                .overlay(RoundedRectangle(cornerRadius:15).stroke(Color.themeInverse.opacity(0.2), lineWidth: 1))
                 .padding(.horizontal, 15)
             
-            VStack(alignment:.leading, spacing: 6) {
+            VStack(alignment:.leading) {
                 HStack {
                     Text(menu.name)
                         .font(.system(size: 24))
@@ -48,6 +50,7 @@ struct DetailView: View {
                         .font(.system(size: 14))
                     Text(menu.category)
                         .font(.system(size: 15))
+                        .foregroundColor(.gray)
                         .italic()
                         .padding(.trailing, 8)
                     
@@ -56,6 +59,7 @@ struct DetailView: View {
                         .font(.system(size: 14))
                     Text(menu.ingredient)
                         .font(.system(size: 15))
+                        .foregroundColor(.gray)
                         .italic()
                         .padding(.trailing, 8)
                     
@@ -64,6 +68,7 @@ struct DetailView: View {
                         .font(.system(size: 14))
                     Text(menu.taste)
                         .font(.system(size: 15))
+                        .foregroundColor(.gray)
                         .italic()
                     
                     Spacer()
@@ -84,43 +89,36 @@ struct DetailView: View {
                         .frame(width: 48, height: 48)
                         .background(Circle().fill(Color.theme))
                         .clipShape(Circle())
-                        .overlay(Circle().stroke(Color.gray, lineWidth: 1))
-                        .padding(.trailing, 6)
+                        .overlay(Circle().stroke(Color.themeInverse.opacity(0.2), lineWidth: 1))
                     
                     Text(selectedTenant.first?.name ?? "Not found")
-                        .font(.title3)
-                        .fontWeight(.medium)
+                        .font(.subheadline)
+                        .fontWeight(.bold)
                 }
                 .padding(.top, 12)
             }
             .padding(.horizontal)
             
             Divider()
-                .frame(height: 1)
-                .background(Color.themeInverse.opacity(0.5))
+                .background(Color.themeInverse.opacity(0.2))
             
-            ScrollView {
-                HStack {
-                    Text("Another Food by \(String(selectedTenant.first?.name ?? "Not found"))")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                    Spacer()
-                }
-                .padding(.top, 8)
-                .padding(.horizontal)
-                
-                LazyVGrid(columns: columns, alignment: .leading) {
-                    ForEach(foodFilteredView) { menu in
-                        NavigationLink(destination: DetailView(menu: menu)) {
-                            MenuCardView(menu: menu)
-                        }
+            HStack {
+                Text("Similar food")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                Spacer()
+            }
+            .padding(.top, 12)
+            .padding(.horizontal)
+            
+            LazyVGrid(columns: columns, alignment: .leading) {
+                ForEach(foodFilteredView) { menu in
+                    NavigationLink(destination: DetailView(menu: menu)) {
+                        MenuCardView(menu: menu)
                     }
                 }
-                .padding(.horizontal)
-                .padding(.top, 5)
             }
-            
-            Spacer()
+            .padding(.horizontal)
         }
     }
     
@@ -138,7 +136,7 @@ struct DetailView: View {
 
 
 #Preview {
-    let sampleTenant = Tenant(id: "t1", name: "Sample Tenant", category: "Cafe", phone: "123456")
+    let sampleTenant = Tenant(id: "t1", name: "Sample Tenant", category: "Cafe", phone: "123456", desc: "Sample Desc")
     
     let sampleMenu = Menu(
         id: "m1",
@@ -151,5 +149,5 @@ struct DetailView: View {
         isFavorite: false
     )
     
-    return DetailView(menu: sampleMenu)
+    DetailView(menu: sampleMenu)
 }

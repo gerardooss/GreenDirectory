@@ -12,6 +12,7 @@ struct TenantResponse: Decodable {
     var name: String
     var category: String
     var phone: String
+    var desc: String
 }
 
 struct MenuResponse: Decodable {
