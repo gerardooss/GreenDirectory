@@ -16,6 +16,7 @@ struct ContentView: View {
     @FocusState private var isSearchFieldFocused: Bool
     @State private var searchText = ""
     @State private var isNavigating = false
+    @State private var tempSearch = ""
     
     var columns: [GridItem] = [GridItem(.flexible())]
     
@@ -84,10 +85,11 @@ struct ContentView: View {
                 }
                 .onSubmit(of: .search) {
                     isNavigating = true
+                    tempSearch = searchText
                     searchText = ""
                 }
                 .navigationDestination(isPresented: $isNavigating) {
-                    // TODO
+                    SearchMenuView(searchQuery: tempSearch)
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
@@ -106,23 +108,6 @@ struct ContentView: View {
             }
         }
         .tint(Color.iconGreen)
-    }
-    
-    
-    private var noResultsView: some View {
-        VStack {
-            Spacer().padding(.top, 42)
-            Image(systemName: "magnifyingglass")
-                .font(.largeTitle)
-                .foregroundColor(Color.gray)
-            Text("No result for \"\(searchText)\"")
-                .font(.title3)
-                .fontWeight(.bold)
-                .padding(.top, 4)
-            Text("Try a different search.")
-                .font(.subheadline)
-                .foregroundColor(Color.gray)
-        }
     }
     
     private func tenantsListView(tenants: [Tenant]) -> some View {
