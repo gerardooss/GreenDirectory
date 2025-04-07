@@ -4,12 +4,17 @@ import SwiftData
 struct DetailView: View {
     @Environment(\.modelContext) private var context
     @Query private var menusFromLocal: [Menu]
+    @Query private var tenantsFromLocal: [Tenant]
     var menu: Menu
     
     let columns: [GridItem] = [GridItem(.flexible()), GridItem(.flexible())]
     
     var foodFilteredView: [Menu] {
         menusFromLocal .filter { $0.tenant?.id == menu.tenant?.id }
+    }
+    
+    var selectedTenant: [Tenant] {
+        tenantsFromLocal .filter { $0.id == menu.tenant?.id }
     }
     
     var body: some View {
@@ -25,14 +30,14 @@ struct DetailView: View {
             
             VStack(alignment:.leading, spacing: 6) {
                 HStack {
-                    Text("Ayam Goreng Madu")
+                    Text(menu.name)
                         .font(.system(size: 24))
                         .fontWeight(.bold)
                         .foregroundStyle(.themeInverse)
                     
                     Spacer()
                     
-                    Text("Rp 12.000")
+                    Text("Rp \(Int(menu.price))")
                         .foregroundColor(.gray)
                         .font(.system(size: 15))
                 }
@@ -41,7 +46,7 @@ struct DetailView: View {
                     Image(systemName: "tag.fill")
                         .foregroundColor(.iconGreen)
                         .font(.system(size: 14))
-                    Text("Side Dish")
+                    Text(menu.category)
                         .font(.system(size: 15))
                         .italic()
                         .padding(.trailing, 8)
@@ -49,7 +54,7 @@ struct DetailView: View {
                     Image(systemName: "carrot.fill")
                         .foregroundColor(.iconGreen)
                         .font(.system(size: 14))
-                    Text("Ayam")
+                    Text(menu.ingredient)
                         .font(.system(size: 15))
                         .italic()
                         .padding(.trailing, 8)
@@ -57,7 +62,7 @@ struct DetailView: View {
                     Image(systemName: "flask.fill")
                         .foregroundColor(.iconGreen)
                         .font(.system(size: 14))
-                    Text("Manis")
+                    Text(menu.taste)
                         .font(.system(size: 15))
                         .italic()
                     
@@ -73,11 +78,16 @@ struct DetailView: View {
                 }
                 
                 HStack {
-                    Image("")
+                    Image(selectedTenant.first?.id ?? "")
+                        .resizable()
+                        .scaledToFill()
                         .frame(width: 48, height: 48)
-                        .background(Circle().fill(.themeInverse))
+                        .background(Circle().fill(Color.theme))
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.gray, lineWidth: 1))
+                        .padding(.trailing, 6)
                     
-                    Text("Kasturi")
+                    Text(selectedTenant.first?.name ?? "Not found")
                         .font(.title3)
                         .fontWeight(.medium)
                 }
@@ -91,7 +101,7 @@ struct DetailView: View {
             
             ScrollView {
                 HStack {
-                    Text("Another Food by Kasturi")
+                    Text("Another Food by \(String(selectedTenant.first?.name ?? "Not found"))")
                         .font(.title3)
                         .fontWeight(.semibold)
                     Spacer()
