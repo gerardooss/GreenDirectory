@@ -39,7 +39,7 @@ struct FavoriteView: View {
                     }
                 }
 
-            }.searchable(text: $searchText)
+            }.searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) )
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Filter Menu")
         }
