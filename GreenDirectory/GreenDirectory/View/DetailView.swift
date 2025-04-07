@@ -144,6 +144,3 @@ struct DetailView: View {
     
     return DetailView(menu: sampleMenu)
 }
-
-
-
