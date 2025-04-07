@@ -68,8 +68,7 @@ struct MenuCardView: View {
         taste: "Sweet",
         price: 5000,
         tenant: sampleTenant,
-        isFavorite: true,
-        skw: ""
+        isFavorite: true
     )
     
     return MenuCardView(menu: sampleMenu)

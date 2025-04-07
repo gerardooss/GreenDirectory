@@ -19,7 +19,7 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            Image("")
+            Image(menu.id)
                 .resizable()
                 .frame(width:370, height:270)
                 .clipShape (RoundedRectangle(cornerRadius:15))
@@ -148,8 +148,7 @@ struct DetailView: View {
         taste: "Sweet",
         price: 10.0,
         tenant: sampleTenant,
-        isFavorite: false,
-        skw: ""
+        isFavorite: false
     )
     
     return DetailView(menu: sampleMenu)

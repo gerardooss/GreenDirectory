@@ -85,7 +85,7 @@ struct ContentView: View {
         }
         let filteredMenus = menusFromLocal.filter { menu in
             searchText.isEmpty || menu.name.localizedCaseInsensitiveContains(searchText) ||
-            menu.searchKeyWord.localizedCaseInsensitiveContains(searchText)
+            menu.name.localizedCaseInsensitiveContains(searchText)
         }
         
         // Empty result for tenant & menu

@@ -6,8 +6,7 @@
     "ingredient": "Water",
     "taste": "Other",
     "price": 4000,
-    "tenantId": "t1",
-    "skw": "ahza water"
+    "tenantId": "t1"
   },
   {
     "id": 3,
@@ -16,8 +15,7 @@
     "ingredient": "Tea",
     "taste": "Sweet",
     "price": 4000,
-    "tenantId": "t1",
-    "skw": "ahza tea"
+    "tenantId": "t1"
   },
   {
     "id": 8,
@@ -26,8 +24,7 @@
     "ingredient": "Other",
     "taste": "Sweet",
     "price": 5000,
-    "tenantId": "t1",
-    "skw": "ahza"
+    "tenantId": "t1"
   },
   {
     "id": 9,
@@ -36,8 +33,7 @@
     "ingredient": "Milk",
     "taste": "Sweet",
     "price": 6000,
-    "tenantId": "t1",
-    "skw": "ahza milk"
+    "tenantId": "t1"
   },
   {
     "id": 10,
@@ -46,8 +42,7 @@
     "ingredient": "Other",
     "taste": "Sweet",
     "price": 6000,
-    "tenantId": "t1",
-    "skw": "ahza"
+    "tenantId": "t1"
   },
   {
     "id": 13,
@@ -56,8 +51,7 @@
     "ingredient": "Other",
     "taste": "Sweet",
     "price": 5000,
-    "tenantId": "t1",
-    "skw": "ahza"
+    "tenantId": "t1"
   },
   {
     "id": 15,
@@ -66,8 +60,7 @@
     "ingredient": "Avocado",
     "taste": "Sweet",
     "price": 10000,
-    "tenantId": "t1",
-    "skw": "ahza avocado juice"
+    "tenantId": "t1"
   },
   {
     "id": 16,
@@ -76,8 +69,7 @@
     "ingredient": "Strawberry",
     "taste": "Sweet",
     "price": 10000,
-    "tenantId": "t1",
-    "skw": "ahza strawberry juice"
+    "tenantId": "t1"
   },
   {
     "id": 25,
@@ -86,8 +78,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 10000,
-    "tenantId": "t1",
-    "skw": "ahza"
+    "tenantId": "t1"
   },
   {
     "id": 28,
@@ -96,8 +87,7 @@
     "ingredient": "Other",
     "taste": "Sweet",
     "price": 10000,
-    "tenantId": "t1",
-    "skw": "ahza kue"
+    "tenantId": "t1"
   },
   {
     "id": 31,
@@ -106,8 +96,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 25000,
-    "tenantId": "t2",
-    "skw": "meatballs baso"
+    "tenantId": "t2"
   },
   {
     "id": 33,
@@ -116,8 +105,7 @@
     "ingredient": "Beef",
     "taste": "Spicy",
     "price": 25000,
-    "tenantId": "t2",
-    "skw": "meatballs baso"
+    "tenantId": "t2"
   },
   {
     "id": 34,
@@ -126,8 +114,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 15000,
-    "tenantId": "t2",
-    "skw": "meatballs baso"
+    "tenantId": "t2"
   },
   {
     "id": 35,
@@ -136,8 +123,7 @@
     "ingredient": "Rice",
     "taste": "Other",
     "price": 5000,
-    "tenantId": "t2",
-    "skw": "rice"
+    "tenantId": "t2"
   },
   {
     "id": 36,
@@ -146,8 +132,7 @@
     "ingredient": "Fish",
     "taste": "Savoury",
     "price": 17000,
-    "tenantId": "t2",
-    "skw": "fish"
+    "tenantId": "t2"
   },
   {
     "id": 39,
@@ -156,8 +141,7 @@
     "ingredient": "Shrimp",
     "taste": "Sour",
     "price": 20000,
-    "tenantId": "t2",
-    "skw": "soup shrimp"
+    "tenantId": "t2"
   },
   {
     "id": 44,
@@ -166,8 +150,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 15000,
-    "tenantId": "t2",
-    "skw": "meatballs baso snack"
+    "tenantId": "t2"
   },
   {
     "id": 45,
@@ -176,8 +159,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 15000,
-    "tenantId": "t2",
-    "skw": "dumplings snack"
+    "tenantId": "t2"
   },
   {
     "id": 47,
@@ -186,8 +168,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 3000,
-    "tenantId": "t2",
-    "skw": "dumplings snack"
+    "tenantId": "t2"
   },
   {
     "id": 48,
@@ -196,8 +177,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 3000,
-    "tenantId": "t2",
-    "skw": "snack"
+    "tenantId": "t2"
   },
   {
     "id": 50,
@@ -206,8 +186,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 14000,
-    "tenantId": "t3",
-    "skw": "kasturi chicken"
+    "tenantId": "t3"
   },
   {
     "id": 52,
@@ -216,8 +195,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t3",
-    "skw": "kasturi chicken"
+    "tenantId": "t3"
   },
   {
     "id": 53,
@@ -226,8 +204,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 14000,
-    "tenantId": "t3",
-    "skw": "kasturi chicken"
+    "tenantId": "t3"
   },
   {
     "id": 56,
@@ -236,8 +213,7 @@
     "ingredient": "Beef",
     "taste": "Spicy",
     "price": 14000,
-    "tenantId": "t3",
-    "skw": "kasturi beef"
+    "tenantId": "t3"
   },
   {
     "id": 57,
@@ -246,8 +222,7 @@
     "ingredient": "Fish",
     "taste": "Spicy",
     "price": 5000,
-    "tenantId": "t3",
-    "skw": "kasturi fish"
+    "tenantId": "t3"
   },
   {
     "id": 61,
@@ -256,8 +231,7 @@
     "ingredient": "Potato",
     "taste": "Spicy",
     "price": 5000,
-    "tenantId": "t3",
-    "skw": "kasturi potato"
+    "tenantId": "t3"
   },
   {
     "id": 69,
@@ -266,8 +240,7 @@
     "ingredient": "Egg",
     "taste": "Spicy",
     "price": 5000,
-    "tenantId": "t3",
-    "skw": "kasturi egg"
+    "tenantId": "t3"
   },
   {
     "id": 72,
@@ -276,8 +249,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t3",
-    "skw": "kasturi vegetables veggies"
+    "tenantId": "t3"
   },
   {
     "id": 76,
@@ -286,8 +258,7 @@
     "ingredient": "Other",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t3",
-    "skw": "kasturi snack"
+    "tenantId": "t3"
   },
   {
     "id": 84,
@@ -296,8 +267,7 @@
     "ingredient": "Other",
     "taste": "Spicy",
     "price": 0,
-    "tenantId": "t3",
-    "skw": "kasturi"
+    "tenantId": "t3"
   },
   {
     "id": 87,
@@ -306,8 +276,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t5",
-    "skw": "ayam"
+    "tenantId": "t5"
   },
   {
     "id": 88,
@@ -316,8 +285,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 16000,
-    "tenantId": "t5",
-    "skw": "ayam"
+    "tenantId": "t5"
   },
   {
     "id": 89,
@@ -326,8 +294,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 16000,
-    "tenantId": "t5",
-    "skw": "ayam"
+    "tenantId": "t5"
   },
   {
     "id": 90,
@@ -336,8 +303,7 @@
     "ingredient": "Squid",
     "taste": "Savoury",
     "price": 16000,
-    "tenantId": "t5",
-    "skw": "squid"
+    "tenantId": "t5"
   },
   {
     "id": 91,
@@ -346,8 +312,7 @@
     "ingredient": "Rice",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t5",
-    "skw": "rice"
+    "tenantId": "t5"
   },
   {
     "id": 92,
@@ -356,8 +321,7 @@
     "ingredient": "Other",
     "taste": "Savoury",
     "price": 12000,
-    "tenantId": "t5",
-    "skw": "snack"
+    "tenantId": "t5"
   },
   {
     "id": 93,
@@ -366,8 +330,7 @@
     "ingredient": "Other",
     "taste": "Sweet",
     "price": 6000,
-    "tenantId": "t5",
-    "skw": "snack"
+    "tenantId": "t5"
   },
   {
     "id": 94,
@@ -376,8 +339,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 7500,
-    "tenantId": "t5",
-    "skw": "snack"
+    "tenantId": "t5"
   },
   {
     "id": 95,
@@ -386,8 +348,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t5",
-    "skw": "snack"
+    "tenantId": "t5"
   },
   {
     "id": 96,
@@ -396,8 +357,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 23000,
-    "tenantId": "t6",
-    "skw": "pak gembul chicken rice"
+    "tenantId": "t6"
   },
   {
     "id": 97,
@@ -406,8 +366,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 15000,
-    "tenantId": "t6",
-    "skw": "pak gembul rice vegetables veggies sayur"
+    "tenantId": "t6"
   },
   {
     "id": 98,
@@ -416,8 +375,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 17000,
-    "tenantId": "t6",
-    "skw": "pak gembul chicken"
+    "tenantId": "t6"
   },
   {
     "id": 99,
@@ -426,8 +384,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t6",
-    "skw": "pak gembul chicken rice"
+    "tenantId": "t6"
   },
   {
     "id": 100,
@@ -436,8 +393,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 12000,
-    "tenantId": "t6",
-    "skw": "pak gembul sayur"
+    "tenantId": "t6"
   },
   {
     "id": 102,
@@ -446,8 +402,7 @@
     "ingredient": "Shrimp",
     "taste": "Savoury",
     "price": 13000,
-    "tenantId": "t6",
-    "skw": "pak gembul snack dumplings shrimp"
+    "tenantId": "t6"
   },
   {
     "id": 103,
@@ -456,8 +411,7 @@
     "ingredient": "Rice",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t6",
-    "skw": "pak gembul rice"
+    "tenantId": "t6"
   },
   {
     "id": 104,
@@ -466,8 +420,7 @@
     "ingredient": "Tempe",
     "taste": "Savoury",
     "price": 3000,
-    "tenantId": "t6",
-    "skw": "pak gembul"
+    "tenantId": "t6"
   },
   {
     "id": 105,
@@ -476,8 +429,7 @@
     "ingredient": "Tofu",
     "taste": "Savoury",
     "price": 3000,
-    "tenantId": "t6",
-    "skw": "pak gembul tofu"
+    "tenantId": "t6"
   },
   {
     "id": 106,
@@ -486,8 +438,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 27000,
-    "tenantId": "t7",
-    "skw": "la ding beef soup"
+    "tenantId": "t7"
   },
   {
     "id": 107,
@@ -496,8 +447,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 27000,
-    "tenantId": "t7",
-    "skw": "la ding beef soup"
+    "tenantId": "t7"
   },
   {
     "id": 108,
@@ -506,8 +456,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t7",
-    "skw": "la ding noodles"
+    "tenantId": "t7"
   },
   {
     "id": 109,
@@ -516,8 +465,7 @@
     "ingredient": "Fish",
     "taste": "Savoury",
     "price": 6000,
-    "tenantId": "t7",
-    "skw": "la ding fish"
+    "tenantId": "t7"
   },
   {
     "id": 110,
@@ -526,8 +474,7 @@
     "ingredient": "Potato",
     "taste": "Savoury",
     "price": 6000,
-    "tenantId": "t7",
-    "skw": "la ding potato"
+    "tenantId": "t7"
   },
   {
     "id": 111,
@@ -536,8 +483,7 @@
     "ingredient": "Egg",
     "taste": "Savoury",
     "price": 6000,
-    "tenantId": "t7",
-    "skw": "la ding egg"
+    "tenantId": "t7"
   },
   {
     "id": 112,
@@ -546,8 +492,7 @@
     "ingredient": "Tofu",
     "taste": "Savoury",
     "price": 6000,
-    "tenantId": "t7",
-    "skw": "la ding tofu"
+    "tenantId": "t7"
   },
   {
     "id": 113,
@@ -556,8 +501,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 6000,
-    "tenantId": "t7",
-    "skw": "la ding veggies vegetables sayur"
+    "tenantId": "t7"
   },
   {
     "id": 114,
@@ -566,8 +510,7 @@
     "ingredient": "Fish",
     "taste": "Savoury",
     "price": 24000,
-    "tenantId": "t7",
-    "skw": "la ding fish"
+    "tenantId": "t7"
   },
   {
     "id": 115,
@@ -576,8 +519,7 @@
     "ingredient": "Rice",
     "taste": "Other",
     "price": 5000,
-    "tenantId": "t7",
-    "skw": "la ding rice"
+    "tenantId": "t7"
   },
   {
     "id": 117,
@@ -586,8 +528,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 23000,
-    "tenantId": "t8",
-    "skw": "chicken noodles"
+    "tenantId": "t8"
   },
   {
     "id": 118,
@@ -596,8 +537,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 28000,
-    "tenantId": "t8",
-    "skw": "chicken noodles dumplings"
+    "tenantId": "t8"
   },
   {
     "id": 119,
@@ -606,8 +546,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 28000,
-    "tenantId": "t8",
-    "skw": "chicken noodles baso meatballs"
+    "tenantId": "t8"
   },
   {
     "id": 120,
@@ -616,8 +555,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 33000,
-    "tenantId": "t8",
-    "skw": "chicken noodles"
+    "tenantId": "t8"
   },
   {
     "id": 121,
@@ -626,8 +564,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 23000,
-    "tenantId": "t8",
-    "skw": "chicken noodles"
+    "tenantId": "t8"
   },
   {
     "id": 122,
@@ -636,8 +573,7 @@
     "ingredient": "Noodles",
     "taste": "Savoury",
     "price": 23000,
-    "tenantId": "t8",
-    "skw": "chicken noodles"
+    "tenantId": "t8"
   },
   {
     "id": 123,
@@ -646,8 +582,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t8",
-    "skw": "vegetables sayur veggies"
+    "tenantId": "t8"
   },
   {
     "id": 124,
@@ -656,8 +591,7 @@
     "ingredient": "Other",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t8",
-    "skw": "vegetables sayur veggies"
+    "tenantId": "t8"
   },
   {
     "id": 125,
@@ -666,8 +600,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 4000,
-    "tenantId": "t8",
-    "skw": "snack"
+    "tenantId": "t8"
   },
   {
     "id": 126,
@@ -676,8 +609,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 4000,
-    "tenantId": "t8",
-    "skw": "snack"
+    "tenantId": "t8"
   },
   {
     "id": 127,
@@ -686,8 +618,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 15000,
-    "tenantId": "t9",
-    "skw": "mustafa minang chicken"
+    "tenantId": "t9"
   },
   {
     "id": 129,
@@ -696,8 +627,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 15000,
-    "tenantId": "t9",
-    "skw": "mustafa minang chicken"
+    "tenantId": "t9"
   },
   {
     "id": 131,
@@ -706,8 +636,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t9",
-    "skw": "mustafa minang beef"
+    "tenantId": "t9"
   },
   {
     "id": 134,
@@ -716,8 +645,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t9",
-    "skw": "mustafa minang chicken"
+    "tenantId": "t9"
   },
   {
     "id": 138,
@@ -726,8 +654,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t9",
-    "skw": "mustafa minang chicken"
+    "tenantId": "t9"
   },
   {
     "id": 140,
@@ -736,8 +663,7 @@
     "ingredient": "Beef",
     "taste": "Savoury",
     "price": 25000,
-    "tenantId": "t9",
-    "skw": "mustafa minang beef"
+    "tenantId": "t9"
   },
   {
     "id": 147,
@@ -746,8 +672,7 @@
     "ingredient": "Tea",
     "taste": "Sweet",
     "price": 5000,
-    "tenantId": "t9",
-    "skw": "mustafa minang tea"
+    "tenantId": "t9"
   },
   {
     "id": 149,
@@ -756,8 +681,7 @@
     "ingredient": "Water",
     "taste": "Other",
     "price": 2000,
-    "tenantId": "t9",
-    "skw": "mustafa minang water"
+    "tenantId": "t9"
   },
   {
     "id": 153,
@@ -766,8 +690,97 @@
     "ingredient": "Egg",
     "taste": "Spicy",
     "price": 5000,
-    "tenantId": "t9",
-    "skw": "mustafa minang egg"
+    "tenantId": "t9"
+  },
+  {
+    "id": 190,
+    "name": "Ayam Goreng",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 15000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 191,
+    "name": "Ayam Kecap",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Sweet",
+    "price": 10000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 192,
+    "name": "Ayam Lada Hitam",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 10000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 193,
+    "name": "Ayam Rica",
+    "category": "Side dish",
+    "ingredient": "Chicken",
+    "taste": "Spicy",
+    "price": 10000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 194,
+    "name": "Bubur Ayam",
+    "category": "Main dish",
+    "ingredient": "Chicken",
+    "taste": "Savoury",
+    "price": 17000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 195,
+    "name": "Cumi Cabe Ijo",
+    "category": "Side dish",
+    "ingredient": "Squid",
+    "taste": "Spicy",
+    "price": 10000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 196,
+    "name": "Gulai Tunjang (Kikil)",
+    "category": "Side dish",
+    "ingredient": "Beef",
+    "taste": "Spicy",
+    "price": 15000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 197,
+    "name": "Kentang Balado",
+    "category": "Side dish",
+    "ingredient": "Potato",
+    "taste": "Spicy",
+    "price": 6000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 198,
+    "name": "Mie Goreng",
+    "category": "Side dish",
+    "ingredient": "Noodles",
+    "taste": "Savoury",
+    "price": 4000,
+    "tenantId": "t10"
+  },
+  {
+    "id": 199,
+    "name": "Nasi Putih",
+    "category": "Main dish",
+    "ingredient": "Rice",
+    "taste": "Other",
+    "price": 5000,
+    "tenantId": "t10"
   },
   {
     "id": 154,
@@ -776,8 +789,7 @@
     "ingredient": "Rice",
     "taste": "Savoury",
     "price": 25000,
-    "tenantId": "t10",
-    "skw": "dapoer cowek rice"
+    "tenantId": "t11"
   },
   {
     "id": 155,
@@ -786,8 +798,7 @@
     "ingredient": "Rice",
     "taste": "Savoury",
     "price": 25000,
-    "tenantId": "t10",
-    "skw": "dapoer cowek rice"
+    "tenantId": "t11"
   },
   {
     "id": 156,
@@ -796,8 +807,7 @@
     "ingredient": "Rice",
     "taste": "Savoury",
     "price": 22000,
-    "tenantId": "t10",
-    "skw": "dapoer cowek rice"
+    "tenantId": "t11"
   },
   {
     "id": 157,
@@ -806,8 +816,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 20000,
-    "tenantId": "t10",
-    "skw": "dapoer cowek vegetables veggies sayur"
+    "tenantId": "t11"
   },
   {
     "id": 158,
@@ -816,8 +825,7 @@
     "ingredient": "Rice",
     "taste": "Savoury",
     "price": 22000,
-    "tenantId": "t10",
-    "skw": "dapoer cowek rice"
+    "tenantId": "t11"
   },
   {
     "id": 159,
@@ -826,8 +834,7 @@
     "ingredient": "Other",
     "taste": "Savoury",
     "price": 2000,
-    "tenantId": "t10",
-    "skw": "dapoer cowek snack"
+    "tenantId": "t11"
   },
   {
     "id": 160,
@@ -836,8 +843,7 @@
     "ingredient": "Chicken",
     "taste": "Savoury",
     "price": 11000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya chicken"
+    "tenantId": "t12"
   },
   {
     "id": 165,
@@ -846,8 +852,7 @@
     "ingredient": "Chicken",
     "taste": "Spicy",
     "price": 11000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya chicken"
+    "tenantId": "t12"
   },
   {
     "id": 167,
@@ -856,8 +861,7 @@
     "ingredient": "Fish",
     "taste": "Savoury",
     "price": 11000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya fish"
+    "tenantId": "t12"
   },
   {
     "id": 168,
@@ -866,8 +870,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya vegetables veggies sayur"
+    "tenantId": "t12"
   },
   {
     "id": 171,
@@ -876,8 +879,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya vegetables veggies sayur"
+    "tenantId": "t12"
   },
   {
     "id": 174,
@@ -886,8 +888,7 @@
     "ingredient": "Veggies",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya vegetables veggies sayur"
+    "tenantId": "t12"
   },
   {
     "id": 180,
@@ -896,8 +897,7 @@
     "ingredient": "Other",
     "taste": "Savoury",
     "price": 2000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya tahu tempe tofu"
+    "tenantId": "t12"
   },
   {
     "id": 182,
@@ -906,8 +906,7 @@
     "ingredient": "Potato",
     "taste": "Savoury",
     "price": 5000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya potato"
+    "tenantId": "t12"
   },
   {
     "id": 186,
@@ -916,8 +915,7 @@
     "ingredient": "Veggies",
     "taste": "Spicy",
     "price": 5000,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya vegetables veggies sayur"
+    "tenantId": "t12"
   },
   {
     "id": 188,
@@ -926,7 +924,6 @@
     "ingredient": "Other",
     "taste": "Savoury",
     "price": 0,
-    "tenantId": "t11",
-    "skw": "kedai 2 nyonya kerupuk"
+    "tenantId": "t12"
   }
 ]
