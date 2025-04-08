@@ -106,6 +106,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .background(Color.theme)
         }
         .tint(Color.iconGreen)
     }

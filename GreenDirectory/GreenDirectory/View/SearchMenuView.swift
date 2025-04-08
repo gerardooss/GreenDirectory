@@ -43,25 +43,30 @@ struct SearchMenuView: View {
                         if let menus = groupedResult[tenant] {
                             VStack(alignment: .leading, spacing: 2) {
                                 NavigationLink(destination: MenuView(tenantId: tenant.id, tenantName: tenant.name, tenantContact: tenant.phone, tenantDesc: tenant.desc)) {
-                                    Text("\(tenant.name) >")
-                                        .font(.headline)
+                                    Text(tenant.name)
+                                        .font(.system(size: 17, weight: .bold))
                                         .foregroundColor(Color.themeInverse)
-                                        .padding(.horizontal)
+                                        .padding(.leading)
+                                    Image(systemName: "chevron.right")
+                                        .font(.system(size: 12, weight: .bold))
                                 }
                                 
                                 ScrollView(.horizontal, showsIndicators: false) {
                                     HStack {
                                         ForEach(menus) { menu in
-                                            MenuCardView(menu: menu)
+                                            NavigationLink(destination: DetailView(menu: menu)) {
+                                                MenuCardView(menu: menu)
+                                            }
                                         }
                                     }
                                     .padding(.horizontal)
                                 }
-                                .padding(.bottom, 8)
+                                .padding(.bottom, 16)
                             }
                         }
                     }
                 }
+                .background(Color.theme)
             }
         }
     }

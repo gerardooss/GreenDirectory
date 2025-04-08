@@ -120,6 +120,7 @@ struct DetailView: View {
             }
             .padding(.horizontal)
         }
+        .background(Color.theme)
     }
     
     private func toggleFavorite() {

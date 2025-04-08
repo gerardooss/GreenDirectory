@@ -23,21 +23,25 @@ struct FavoriteView: View {
                     if let menus = filteredFavorites[tenant]{
                         VStack(alignment: .leading) {
                             Text(tenant.name)
-                                .font(.headline)
+                                .font(.system(size: 17, weight: .bold))
                                 .padding(.horizontal)
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
                                     ForEach(menus) { menu in
-                                        MenuCardView(menu: menu)
+                                        NavigationLink(destination: DetailView(menu: menu)) {
+                                            MenuCardView(menu: menu)
+                                        }
                                     }
                                 }
                                 .padding(.horizontal)
                             }
+                            .padding(.bottom, 16)
                         }
                     }
                 }
             }
+            .background(Color.theme)
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always) )
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Favorite Dishes")

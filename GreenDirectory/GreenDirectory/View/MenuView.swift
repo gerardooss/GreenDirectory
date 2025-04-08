@@ -75,11 +75,11 @@ struct MenuView: View {
                                 
                                 Text(tenantContact)
                                     .font(.subheadline)
-                                    .foregroundStyle(Color.gray)
                                     .padding(.bottom, 1)
                             }
                             Text(tenantDesc)
-                                .font(.system(size: 12))
+                                .font(.system(size: 13))
+                                .foregroundColor(.black.opacity(0.6))
                                 .lineLimit(4)
                         }
                         .padding(.leading, 4)
@@ -106,6 +106,7 @@ struct MenuView: View {
                 .navigationTitle(Text(tenantName))
                 .navigationBarTitleDisplayMode(.inline)
             }
+            .background(Color.theme)
             .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
