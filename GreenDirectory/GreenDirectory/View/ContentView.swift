@@ -12,63 +12,96 @@ struct ContentView: View {
     
     @Environment(\.modelContext) private var context
     @Query private var tenantsFromLocal: [Tenant]
-    @Query private var menusFromLocal: [Menu]
     
     @FocusState private var isSearchFieldFocused: Bool
     @State private var searchText = ""
-    @State private var selection = "Tenants"
+    @State private var isNavigating = false
+    @State private var tempSearch = ""
     
-    var columns: [GridItem] {
-        if selection == "Tenants" {
-            return [GridItem(.flexible())]
+    var columns: [GridItem] = [GridItem(.flexible())]
+    
+    var suggestions: [String] {
+        let baseSuggestions = ["Ayam", "Bakso", "Pecel", "Soto", "Mi", "Nasi", "Telur", "Kentang"]
+        
+        if searchText.isEmpty {
+            return []
         } else {
-            return Array(repeating: .init(.flexible()), count: 2)
+            let filtered = baseSuggestions
+                .filter { $0.localizedCaseInsensitiveContains(searchText) }
+            
+            if filtered.isEmpty {
+                return [searchText]
+            } else {
+                return filtered
+            }
         }
     }
     
     var body: some View {
-        NavigationStack{
-            VStack{
-                if isSearchFieldFocused {
-                    Picker("Selection", selection: $selection) {
-                        Text("Tenants").tag("Tenants")
-                        Text("Foods").tag("Foods")
+        let sortedTenants = tenantsFromLocal.sorted {
+            $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending
+        }
+
+        NavigationStack {
+            VStack {
+                ScrollView {
+                    if isSearchFieldFocused {
+                        HStack {
+                            Text("Start typing to search...")
+                                .foregroundColor(.gray)
+                                .italic()
+                            Spacer()
+                        }
+                        .padding(.horizontal)
+                    } else {
+                        HStack {
+                            Text("Tenant List")
+                                .fontWeight(.semibold)
+                                .padding(.horizontal, 16)
+                            Spacer()
+                        }
+                        .padding(.top, 8)
+                        
+                        LazyVGrid(columns: columns) {
+                            tenantsListView(tenants: sortedTenants)
+                        }
+                        .padding(.horizontal, 12)
                     }
-                    .pickerStyle(.segmented)
-                    .padding(.horizontal)
-                    .animation(.easeIn(duration: 0.17))
                 }
-                
-                ScrollView{
-                    LazyVGrid(columns: columns) {
-                        contentForLazyVGrid
-                    }
-                    .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always))
-                    .searchFocused($isSearchFieldFocused)
-                    .onChange(of: isSearchFieldFocused) { newValue in
-                        if !newValue && searchText.isEmpty {
-                            selection = "Tenants"
-                        }
-                    }
-                    .padding(12)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Text(selection == "Tenants" ? "Tenants" : "Foods")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                        }
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: {
-                                // TODO
-                            }) {
-                                NavigationLink(destination: {
-                                    FavoriteView()
-                                }, label: {
-                                    Image(systemName: "heart.circle")
-                                        .foregroundColor(Color.iconGreen)
-                                        .font(.title2)
-                                })
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "🍜 What are you craving?")
+                .searchFocused($isSearchFieldFocused)
+                .searchSuggestions {
+                    ForEach(suggestions, id: \.self) { suggestion in
+                        Button {
+                            searchText = suggestion
+                            isNavigating = true
+                        } label: {
+                            HStack{
+                                Image(systemName: "fork.knife.circle.fill")
+                                Text(suggestion)
                             }
+                        }
+                    }
+                }
+                .onSubmit(of: .search) {
+                    isNavigating = true
+                    tempSearch = searchText
+                    searchText = ""
+                }
+                .navigationDestination(isPresented: $isNavigating) {
+                    SearchMenuView(searchQuery: tempSearch)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Text("Discover")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: FavoriteView()) {
+                            Image(systemName: "heart.circle")
+                                .foregroundColor(Color.iconGreen)
+                                .font(.title2)
                         }
                     }
                 }
@@ -77,67 +110,11 @@ struct ContentView: View {
         .tint(Color.iconGreen)
     }
     
-    @ViewBuilder
-    private var contentForLazyVGrid: some View {
-        // Filter tenant & menu
-        let filteredTenants = tenantsFromLocal.filter { tenant in
-            searchText.isEmpty || tenant.name.localizedCaseInsensitiveContains(searchText)
-        }
-        let filteredMenus = menusFromLocal.filter { menu in
-            searchText.isEmpty || menu.name.localizedCaseInsensitiveContains(searchText) ||
-            menu.searchKeyWord.localizedCaseInsensitiveContains(searchText)
-        }
-        
-        // Empty result for tenant & menu
-        let showNoTenantsResults = selection == "Tenants" && filteredTenants.isEmpty && !searchText.isEmpty
-        let showNoFoodsResults = selection == "Foods" && filteredMenus.isEmpty && !searchText.isEmpty
-        
-        if selection == "Tenants" {
-            if showNoTenantsResults {
-                noResultsView
-            } else {
-                tenantsListView(tenants: filteredTenants)
-            }
-        } else {
-            if showNoFoodsResults {
-                noResultsView
-            } else {
-                foodsListView(menus: filteredMenus)
-            }
-        }
-    }
-    
-    private var noResultsView: some View {
-        VStack {
-            Spacer().padding(.top, 42)
-            Image(systemName: "magnifyingglass")
-                .font(.largeTitle)
-                .foregroundColor(Color.gray)
-            Text("No result for \"\(searchText)\"")
-                .font(.title3)
-                .fontWeight(.bold)
-                .padding(.top, 4)
-            Text("Try a different search.")
-                .font(.subheadline)
-                .foregroundColor(Color.gray)
-        }
-    }
-    
     private func tenantsListView(tenants: [Tenant]) -> some View {
         ForEach(tenants) { tenant in
             NavigationLink(
-                destination: MenuView(tenantId: tenant.id, tenantName: tenant.name, tenantContact: tenant.phone, tenantDesc: ""),
+                destination: MenuView(tenantId: tenant.id, tenantName: tenant.name, tenantContact: tenant.phone, tenantDesc: tenant.desc),
                 label: { CardView(tenantName: tenant.name, tenantId: tenant.id, tenantCategory: tenant.category) }
-            )
-            .padding(.bottom, 4)
-        }
-    }
-    
-    private func foodsListView(menus: [Menu]) -> some View {
-        ForEach(menus) { menu in
-            NavigationLink(
-                destination: DetailView(menu: menu),
-                label: { MenuCardView(menu: menu) }
             )
             .padding(.bottom, 4)
         }

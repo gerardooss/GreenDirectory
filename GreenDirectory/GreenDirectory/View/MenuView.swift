@@ -69,13 +69,16 @@ struct MenuView: View {
                         Spacer()
                         
                         VStack(alignment: .leading) {
-                            Text(tenantName)
-                                .font(.headline)
-                            Text(tenantContact)
-                                .font(.subheadline)
-                                .foregroundStyle(Color.gray)
-                                .padding(.bottom, 1)
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed pellentesque justo. ")
+                            HStack(spacing: 6) {
+                                Image(systemName: "phone.fill")
+                                    .foregroundColor(Color.iconGreen)
+                                
+                                Text(tenantContact)
+                                    .font(.subheadline)
+                                    .foregroundStyle(Color.gray)
+                                    .padding(.bottom, 1)
+                            }
+                            Text(tenantDesc)
                                 .font(.system(size: 12))
                                 .lineLimit(4)
                         }
@@ -83,7 +86,6 @@ struct MenuView: View {
                         
                         Spacer()
                     }
-                    .padding(.trailing, 4)
                     .padding(.trailing, 4)
                     
                     Divider()
@@ -101,7 +103,7 @@ struct MenuView: View {
                     .padding(.horizontal)
                     .padding(.top, 5)
                 }
-                .navigationTitle(Text("Daftar Menu"))
+                .navigationTitle(Text(tenantName))
                 .navigationBarTitleDisplayMode(.inline)
             }
             .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always))
@@ -308,5 +310,5 @@ struct MenuView: View {
     MenuView(tenantId: "t1",
              tenantName: "Ahza Snack & Beverages",
              tenantContact:"12341412",
-             tenantDesc: "")
+             tenantDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed pellentesque justo.")
 }

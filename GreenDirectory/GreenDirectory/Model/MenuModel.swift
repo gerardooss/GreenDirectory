@@ -18,7 +18,6 @@ class Menu: Identifiable {
     var price: Double
     var tenant: Tenant?
     var isFavorite: Bool = false
-    var searchKeyWord: String
     
     init (
         id: String,
@@ -28,8 +27,7 @@ class Menu: Identifiable {
         taste: String,
         price: Double,
         tenant: Tenant? ,
-        isFavorite: Bool,
-        skw: String
+        isFavorite: Bool
     ) {
         self.id = id
         self.name = name
@@ -39,6 +37,5 @@ class Menu: Identifiable {
         self.price = price
         self.tenant = tenant
         self.isFavorite = isFavorite
-        self.searchKeyWord = skw
     }
 }

@@ -30,7 +30,8 @@ actor Container {
                         id: i.id,
                         name: i.name,
                         category: i.category,
-                        phone: i.phone
+                        phone: i.phone,
+                        desc: i.desc
                     )
                     
                     container.mainContext.insert(tenantObject)
@@ -55,8 +56,7 @@ actor Container {
                         taste: i.taste,
                         price: i.price,
                         tenant: tenant,
-                        isFavorite: false,
-                        skw: i.skw
+                        isFavorite: false
                     )
                     container.mainContext.insert(menuObject)
                     print("Menu inserted: \(menuObject.name), ID: \(menuObject.id)")

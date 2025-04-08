@@ -12,14 +12,14 @@ struct MenuCardView: View {
     var menu: Menu
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: 1) {
             Image(menu.id)
                 .resizable()
                 .frame(width: 164, height: 118)
+                .cornerRadius(12)
                 .background(
                     RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.2))
                 )
-                .padding(.top, 8)
                 .padding(.horizontal, 8)
             
             HStack {
@@ -34,12 +34,12 @@ struct MenuCardView: View {
                     .foregroundColor(.red)
             }
             .padding(.horizontal, 12)
+            .padding(.top, 3)
             
             VStack(alignment: .leading) {
                 Text(menu.ingredient)
                     .font(.system(size: 13))
                     .foregroundColor(Color.gray)
-                    .padding(.bottom, 2)
                 
                 Text("Rp \(Int(menu.price))")
                     .font(.system(size: 13))
@@ -51,24 +51,23 @@ struct MenuCardView: View {
         }
         .frame(width: 180, height: 190)
         .background(Color.cardBG)
-        .cornerRadius(2)
+        .cornerRadius(16)
         .shadow(color: Color.black.opacity(0.1), radius: 2, x: 1, y: 2)
     }
 }
 
 #Preview {
-    let sampleTenant = Tenant(id: "t1", name: "Sample Tenant", category: "Cafe", phone: "123456")
+    let sampleTenant = Tenant(id: "t1", name: "Sample Tenant", category: "Cafe", phone: "123456", desc: "Sample Desc")
     let sampleMenu = Menu(
-        id: "m1",
+        id: "57",
         name: "Leppy",
         category: "Food",
         ingredient: "Choco",
         taste: "Sweet",
         price: 5000,
         tenant: sampleTenant,
-        isFavorite: true,
-        skw: ""
+        isFavorite: true
     )
     
-    return MenuCardView(menu: sampleMenu)
+    MenuCardView(menu: sampleMenu)
 }
