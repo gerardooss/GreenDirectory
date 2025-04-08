@@ -12,7 +12,7 @@ struct MenuCardView: View {
     var menu: Menu
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 2) {
             Image(menu.id)
                 .resizable()
                 .frame(width: 164, height: 118)
@@ -24,7 +24,7 @@ struct MenuCardView: View {
             
             HStack {
                 Text(menu.name)
-                    .font(.system(size: 16, weight: .bold))
+                    .font(.system(size: 17, weight: .bold))
                     .foregroundColor(Color.themeInverse)
                     .multilineTextAlignment(.leading)
                 
@@ -37,18 +37,16 @@ struct MenuCardView: View {
             
             VStack(alignment: .leading) {
                 Text(menu.ingredient)
-                    .font(.system(size: 11))
+                    .font(.system(size: 13))
                     .foregroundColor(Color.gray)
                     .padding(.bottom, 2)
                 
                 Text("Rp \(Int(menu.price))")
-                    .font(.system(size: 11))
+                    .font(.system(size: 13))
                     .foregroundColor(Color.gray)
                 
             }
             .padding(.horizontal, 12)
-            
-            Spacer()
             
         }
         .frame(width: 180, height: 190)
