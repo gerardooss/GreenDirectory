@@ -12,7 +12,7 @@ struct MenuCardView: View {
     var menu: Menu
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 1) {
+        VStack(alignment: .leading) {
             Image(menu.id)
                 .resizable()
                 .frame(width: 164, height: 118)
@@ -21,22 +21,23 @@ struct MenuCardView: View {
                     RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.2))
                 )
                 .padding(.horizontal, 8)
+                .padding(.top, 8)
             
-            HStack {
-                Text(menu.name)
-                    .font(.system(size: 17, weight: .bold))
-                    .foregroundColor(Color.themeInverse)
-                    .multilineTextAlignment(.leading)
-                
-                Spacer()
-                
-                Image(systemName: menu.isFavorite ? "heart.fill" : "heart")
-                    .foregroundColor(.red)
-            }
-            .padding(.horizontal, 12)
-            .padding(.top, 3)
+            Spacer().frame(height: 4)
             
             VStack(alignment: .leading) {
+                HStack {
+                    Text(menu.name)
+                        .font(.system(size: 17, weight: .bold))
+                        .foregroundColor(Color.themeInverse)
+                        .multilineTextAlignment(.leading)
+                    
+                    Spacer()
+                    
+                    Image(systemName: menu.isFavorite ? "heart.fill" : "heart")
+                        .foregroundColor(.red)
+                }
+                
                 Text(menu.ingredient)
                     .font(.system(size: 13))
                     .foregroundColor(Color.gray)
@@ -46,8 +47,8 @@ struct MenuCardView: View {
                     .foregroundColor(Color.gray)
                 
             }
-            .padding(.horizontal, 12)
-            
+            .padding(.horizontal, 8)
+            .padding(.bottom, 8)
         }
         .frame(width: 180, height: 190)
         .background(Color.cardBG)

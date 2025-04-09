@@ -53,44 +53,11 @@ struct MenuView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    HStack {
-                        Image(tenantId)
-                            .resizable()
-                            .frame(width: 130, height: 130)
-                            .scaledToFill()
-                            .clipShape(.circle)
-                            .overlay(
-                                Circle().stroke(
-                                    Color.black.opacity(0.5), lineWidth: 1)
-                            )
-                            .padding(.leading, 20)
-                            .padding(.vertical, 8)
-                        
-                        Spacer()
-                        
-                        VStack(alignment: .leading) {
-                            HStack(spacing: 6) {
-                                Image(systemName: "phone.fill")
-                                    .foregroundColor(Color.iconGreen)
-                                
-                                Text(tenantContact)
-                                    .font(.subheadline)
-                                    .padding(.bottom, 1)
-                            }
-                            Text(tenantDesc)
-                                .font(.system(size: 13))
-                                .foregroundColor(.black.opacity(0.6))
-                                .lineLimit(4)
-                        }
-                        .padding(.leading, 4)
-                        
-                        Spacer()
-                    }
-                    .padding(.trailing, 4)
+                    tenantInfo()
                     
                     Divider()
                         .frame(height: 1)
-                        .background(Color.black.opacity(0.3))
+                        .background(Color.themeInverse.opacity(0.3))
                     
                     // Menu list
                     LazyVGrid(columns: columns, alignment: .leading) {
@@ -185,6 +152,14 @@ struct MenuView: View {
             
             Spacer()
             
+            if (!selectedCategories.isEmpty || !selectedTastes.isEmpty || !selectedIngredients.isEmpty || minPrice != 0 || maxPrice != 50000) {
+                Text("Show \(foodFilteredView.count) results")
+                    .foregroundColor(.gray)
+                    .italic()
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
             HStack(spacing: 12) {
                 Button("Reset") {
                     selectedCategories.removeAll()
@@ -213,6 +188,43 @@ struct MenuView: View {
             .padding(.horizontal)
         }
         .background(Color.gray.opacity(0.05))
+    }
+    
+    private func tenantInfo() -> some View {
+        HStack {
+            Image(tenantId)
+                .resizable()
+                .frame(width: 130, height: 130)
+                .scaledToFill()
+                .clipShape(.circle)
+                .overlay(
+                    Circle().stroke(
+                        Color.black.opacity(0.5), lineWidth: 1)
+                )
+                .padding(.leading, 20)
+                .padding(.vertical, 8)
+            
+            Spacer()
+            
+            VStack(alignment: .leading) {
+                HStack(spacing: 6) {
+                    Image(systemName: "phone.fill")
+                        .foregroundColor(Color.iconGreen)
+                    
+                    Text(tenantContact)
+                        .font(.subheadline)
+                        .padding(.bottom, 1)
+                }
+                Text(tenantDesc)
+                    .font(.system(size: 13))
+                    .foregroundColor(Color.themeInverse.opacity(0.6))
+                    .lineLimit(4)
+            }
+            .padding(.leading, 4)
+            
+            Spacer()
+        }
+        .padding(.trailing, 4)
     }
     
     // Chip component
