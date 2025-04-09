@@ -152,6 +152,14 @@ struct MenuView: View {
             
             Spacer()
             
+            if (!selectedCategories.isEmpty || !selectedTastes.isEmpty || !selectedIngredients.isEmpty || minPrice != 0 || maxPrice != 50000) {
+                Text("Show \(foodFilteredView.count) results")
+                    .foregroundColor(.gray)
+                    .italic()
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
             HStack(spacing: 12) {
                 Button("Reset") {
                     selectedCategories.removeAll()
