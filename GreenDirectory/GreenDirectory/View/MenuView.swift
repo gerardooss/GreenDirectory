@@ -53,42 +53,11 @@ struct MenuView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    HStack {
-                        Image(tenantId)
-                            .resizable()
-                            .frame(width: 130, height: 130)
-                            .scaledToFill()
-                            .clipShape(.circle)
-                            .overlay(
-                                Circle().stroke(
-                                    Color.black.opacity(0.5), lineWidth: 1)
-                            )
-                            .padding(.leading, 20)
-                            .padding(.vertical, 8)
-                        
-                        Spacer()
-                        
-                        VStack(alignment: .leading) {
-                            Text(tenantName)
-                                .font(.headline)
-                            Text(tenantContact)
-                                .font(.subheadline)
-                                .foregroundStyle(Color.gray)
-                                .padding(.bottom, 1)
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed pellentesque justo. ")
-                                .font(.system(size: 12))
-                                .lineLimit(4)
-                        }
-                        .padding(.leading, 4)
-                        
-                        Spacer()
-                    }
-                    .padding(.trailing, 4)
-                    .padding(.trailing, 4)
+                    tenantInfo()
                     
                     Divider()
                         .frame(height: 1)
-                        .background(Color.black.opacity(0.3))
+                        .background(Color.themeInverse.opacity(0.3))
                     
                     // Menu list
                     LazyVGrid(columns: columns, alignment: .leading) {
@@ -101,9 +70,10 @@ struct MenuView: View {
                     .padding(.horizontal)
                     .padding(.top, 5)
                 }
-                .navigationTitle(Text("Daftar Menu"))
+                .navigationTitle(Text(tenantName))
                 .navigationBarTitleDisplayMode(.inline)
             }
+            .background(Color.theme)
             .searchable(text: $searchText,placement: .navigationBarDrawer(displayMode: .always))
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -182,6 +152,14 @@ struct MenuView: View {
             
             Spacer()
             
+            if (!selectedCategories.isEmpty || !selectedTastes.isEmpty || !selectedIngredients.isEmpty || minPrice != 0 || maxPrice != 50000) {
+                Text("Show \(foodFilteredView.count) results")
+                    .foregroundColor(.gray)
+                    .italic()
+                    .padding(.horizontal)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            
             HStack(spacing: 12) {
                 Button("Reset") {
                     selectedCategories.removeAll()
@@ -210,6 +188,43 @@ struct MenuView: View {
             .padding(.horizontal)
         }
         .background(Color.gray.opacity(0.05))
+    }
+    
+    private func tenantInfo() -> some View {
+        HStack {
+            Image(tenantId)
+                .resizable()
+                .frame(width: 130, height: 130)
+                .scaledToFill()
+                .clipShape(.circle)
+                .overlay(
+                    Circle().stroke(
+                        Color.black.opacity(0.5), lineWidth: 1)
+                )
+                .padding(.leading, 20)
+                .padding(.vertical, 8)
+            
+            Spacer()
+            
+            VStack(alignment: .leading) {
+                HStack(spacing: 6) {
+                    Image(systemName: "phone.fill")
+                        .foregroundColor(Color.iconGreen)
+                    
+                    Text(tenantContact)
+                        .font(.subheadline)
+                        .padding(.bottom, 1)
+                }
+                Text(tenantDesc)
+                    .font(.system(size: 13))
+                    .foregroundColor(Color.themeInverse.opacity(0.6))
+                    .lineLimit(4)
+            }
+            .padding(.leading, 4)
+            
+            Spacer()
+        }
+        .padding(.trailing, 4)
     }
     
     // Chip component
@@ -308,5 +323,5 @@ struct MenuView: View {
     MenuView(tenantId: "t1",
              tenantName: "Ahza Snack & Beverages",
              tenantContact:"12341412",
-             tenantDesc: "")
+             tenantDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed pellentesque justo.")
 }

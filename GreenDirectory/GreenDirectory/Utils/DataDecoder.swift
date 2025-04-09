@@ -12,6 +12,7 @@ struct TenantResponse: Decodable {
     var name: String
     var category: String
     var phone: String
+    var desc: String
 }
 
 struct MenuResponse: Decodable {
@@ -22,7 +23,6 @@ struct MenuResponse: Decodable {
     var taste: String
     var price: Double
     var tenantId: String
-    var skw: String
 }
 
 struct TenantJSONDecoder{

@@ -37,6 +37,7 @@ struct CardView: View {
                     Text(tenantCategory)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
+                        .multilineTextAlignment(.leading)
                 }
                 Spacer()
             }
